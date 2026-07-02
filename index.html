@@ -10,11 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;800;900&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
-        /* ご要望の M PLUS 1p をベースに適用 */
         body {
             font-family: 'M PLUS 1p', 'Noto Sans JP', sans-serif;
         }
-        /* スクロールバーも可愛いピンクに */
         ::-webkit-scrollbar { width: 6px; height: 6px; }
         ::-webkit-scrollbar-track { background: #fff5f5; }
         ::-webkit-scrollbar-thumb { background: #f472b6; border-radius: 3px; }
@@ -23,12 +21,12 @@
 </head>
 <body class="bg-pink-50/40 text-slate-800 antialiased selection:bg-pink-100 selection:text-pink-900">
 
-    <div x-data="app()" x-init="initApp()" class="max-w-6xl mx-auto px-4 py-8">
+    <div x-data="app()" x-init="initApp()" class="max-w-6xl mx-auto px-4 py-6 sm:py-8">
         
-        <header class="mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 pb-5 border-b border-pink-200">
+        <header class="mb-6 sm:mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 pb-5 border-b border-pink-200">
             <div class="flex items-center gap-3">
                 <span class="text-2xl inline-block transform rotate-[-12deg] select-none text-pink-500">🦇</span>
-                <h1 class="text-2xl font-black text-slate-900 tracking-wider">コーサカTRPGまとめ</h1>
+                <h1 class="text-xl sm:text-2xl font-black text-slate-900 tracking-wider">コーサカTRPGまとめ</h1>
                 <span class="text-[10px] bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full font-bold border border-pink-200 tracking-wide">非公式</span>
             </div>
             <div class="text-xs text-slate-400 font-medium tracking-tight">
@@ -36,38 +34,91 @@
             </div>
         </header>
 
-        <div class="bg-white p-5 rounded-2xl border border-pink-100 mb-6 space-y-4 shadow-xs">
+        <div class="bg-white p-4 sm:p-5 rounded-2xl border border-pink-100 mb-6 space-y-4 shadow-xs">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
                     <input type="text" x-model="searchQuery" placeholder="🔍 シナリオ、システム、PL、PC名..." class="w-full bg-pink-50/20 border border-pink-150 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition-all">
                 </div>
 
-                <div class="md:col-span-2 flex items-center gap-2">
-                    <input type="date" x-model="startDate" class="w-full bg-pink-50/20 border border-pink-150 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition-all text-slate-500">
-                    <span class="text-pink-300 text-xs font-bold">〜</span>
-                    <input type="date" x-model="endDate" class="w-full bg-pink-50/20 border border-pink-150 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition-all text-slate-500">
+                <div class="md:col-span-2 flex flex-col sm:flex-row sm:items-center gap-2">
+                    <div class="flex items-center w-full bg-pink-50/20 border border-pink-150 rounded-xl px-3 py-1">
+                        <span class="text-[11px] font-bold text-pink-400 mr-2 whitespace-nowrap sm:hidden">開始</span>
+                        <input type="date" x-model="startDate" class="w-full bg-transparent text-sm focus:outline-none py-1.5 text-slate-600 cursor-pointer">
+                    </div>
+                    <span class="text-pink-300 text-xs font-bold text-center hidden sm:inline">〜</span>
+                    <div class="flex items-center w-full bg-pink-50/20 border border-pink-150 rounded-xl px-3 py-1">
+                        <span class="text-[11px] font-bold text-pink-400 mr-2 whitespace-nowrap sm:hidden">終了</span>
+                        <input type="date" x-model="endDate" class="w-full bg-transparent text-sm focus:outline-none py-1.5 text-slate-600 cursor-pointer">
+                    </div>
                 </div>
             </div>
 
-            <div class="flex flex-wrap items-center gap-3 pt-3 border-t border-pink-50 text-xs">
-                
-                <div class="inline-flex gap-1 bg-pink-50/60 p-1 rounded-xl border border-pink-100">
-                    <button @click="toggleRole('gm')" :class="kosakaRole === 'gm' ? 'bg-pink-500 text-white font-bold' : 'text-slate-600 hover:bg-pink-100/50'" class="px-4 py-1.5 rounded-lg transition-all cursor-pointer">GM</button>
-                    <button @click="toggleRole('pl')" :class="kosakaRole === 'pl' ? 'bg-pink-500 text-white font-bold' : 'text-slate-600 hover:bg-pink-100/50'" class="px-4 py-1.5 rounded-lg transition-all cursor-pointer">PL</button>
+            <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-pink-50 text-xs">
+                <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto">
+                    <div class="inline-flex gap-1 bg-pink-50/60 p-1 rounded-xl border border-pink-100">
+                        <button @click="toggleRole('gm')" :class="kosakaRole === 'gm' ? 'bg-pink-500 text-white font-bold shadow-xs' : 'text-slate-600 hover:bg-pink-100/50'" class="px-4 py-1.5 rounded-lg transition-all cursor-pointer">GM</button>
+                        <button @click="toggleRole('pl')" :class="kosakaRole === 'pl' ? 'bg-pink-500 text-white font-bold shadow-xs' : 'text-slate-600 hover:bg-pink-100/50'" class="px-4 py-1.5 rounded-lg transition-all cursor-pointer">PL</button>
+                    </div>
+
+                    <div class="inline-flex gap-1 bg-pink-50/60 p-1 rounded-xl border border-pink-100">
+                        <button @click="toggleStatus('watched')" :class="selectedStatus === 'watched' ? 'bg-pink-500 text-white font-bold shadow-xs' : 'text-slate-600 hover:bg-pink-100/50'" class="px-4 py-1.5 rounded-lg transition-all cursor-pointer">✅ 視聴済み</button>
+                        <button @click="toggleStatus('unwatched')" :class="selectedStatus === 'unwatched' ? 'bg-pink-500 text-white font-bold shadow-xs' : 'text-slate-600 hover:bg-pink-100/50'" class="px-4 py-1.5 rounded-lg transition-all cursor-pointer">⬜ 未視聴</button>
+                    </div>
                 </div>
 
-                <div class="inline-flex gap-1 bg-pink-50/60 p-1 rounded-xl border border-pink-100">
-                    <button @click="toggleStatus('watched')" :class="selectedStatus === 'watched' ? 'bg-pink-500 text-white font-bold' : 'text-slate-600 hover:bg-pink-100/50'" class="px-4 py-1.5 rounded-lg transition-all cursor-pointer">✅ 視聴済み</button>
-                    <button @click="toggleStatus('unwatched')" :class="selectedStatus === 'unwatched' ? 'bg-pink-500 text-white font-bold' : 'text-slate-600 hover:bg-pink-100/50'" class="px-4 py-1.5 rounded-lg transition-all cursor-pointer">⬜ 未視聴</button>
-                </div>
-
-                <button @click="toggleSortOrder()" class="sm:ml-auto border border-pink-200 hover:bg-pink-50/50 text-slate-600 font-medium px-4 py-1.5 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer">
+                <button @click="toggleSortOrder()" class="ml-auto sm:ml-0 border border-pink-200 hover:bg-pink-50/50 text-slate-600 font-medium px-4 py-1.5 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer">
                     <span x-text="sortOrder === 'desc' ? '📅 新しい順' : '📅 古い順'"></span>
                 </button>
             </div>
         </div>
 
-        <div class="bg-white rounded-2xl border border-pink-100 overflow-hidden shadow-xs">
+        <div class="block md:hidden space-y-4">
+            <template x-for="stream in filteredStreams()" :key="'card-'+stream.id">
+                <div class="bg-white rounded-2xl border border-pink-100 p-4 shadow-xs space-y-3 transition-colors" :class="isWatched(stream.id) ? 'bg-pink-50/10' : ''">
+                    <div class="flex items-center justify-between border-b border-pink-50 pb-2">
+                        <span class="text-xs text-slate-400 font-medium" x-text="stream.date"></span>
+                        <label class="flex items-center gap-1.5 text-xs text-slate-500 cursor-pointer select-none">
+                            <input type="checkbox" :checked="isWatched(stream.id)" @change="toggleWatched(stream.id)" class="w-4 h-4 rounded border-pink-300 text-pink-500 focus:ring-pink-400 cursor-pointer accent-pink-500">
+                            <span class="text-[11px]" x-text="isWatched(stream.id) ? '視聴済み' : '未視聴'"></span>
+                        </label>
+                    </div>
+
+                    <div class="flex justify-between items-start gap-3">
+                        <div class="space-y-1 flex-1">
+                            <div class="font-bold text-slate-900 tracking-wide leading-snug" x-text="stream.scenario"></div>
+                            <span class="inline-block bg-slate-100 text-slate-500 text-[10px] px-1.5 py-0.2 rounded-md font-medium" x-text="stream.system"></span>
+                        </div>
+                        <div class="flex flex-col gap-1 w-24 shrink-0 text-center">
+                            <template x-for="link in stream.links">
+                                <a :href="link.url" target="_blank" class="inline-block w-full bg-pink-500 hover:bg-pink-600 text-white text-[10px] py-0.5 px-1.5 rounded-lg font-medium transition-colors shadow-xs" x-text="link.label"></a>
+                            </template>
+                            <template x-if="stream.hashtag">
+                                <a :href="'https://x.com/search?q=' + encodeURIComponent(stream.hashtag)" target="_blank" class="inline-block w-full bg-slate-700 hover:bg-slate-600 text-white text-[9px] py-0.5 px-1.5 rounded-lg font-normal transition-colors overflow-hidden text-ellipsis whitespace-nowrap" x-text="stream.hashtag"></a>
+                            </template>
+                        </div>
+                    </div>
+
+                    <div class="bg-pink-50/20 rounded-xl p-3 space-y-2 text-xs border border-pink-50/50">
+                        <div>
+                            <span class="text-slate-400 font-bold mr-1">GM:</span>
+                            <span class="font-medium text-slate-700" x-text="stream.gm"></span>
+                        </div>
+                        <div class="flex flex-wrap items-start gap-1">
+                            <span class="text-slate-400 font-bold mr-1 shrink-0 mt-0.5">PL:</span>
+                            <div class="flex flex-wrap gap-1 flex-1">
+                                <template x-for="char in stream.characters">
+                                    <button @click="openModal(char)" class="bg-white text-pink-700 hover:bg-pink-50 text-[11px] font-medium px-2 py-0.5 rounded-md cursor-pointer border border-pink-100 transition-colors">
+                                        <span x-text="char.plName ? char.plName + '（' + char.pcName + '）' : char.pcName"></span>
+                                    </button>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <div class="hidden md:block bg-white rounded-2xl border border-pink-100 overflow-hidden shadow-xs">
             <div class="overflow-x-auto">
                 <table class="w-full text-left border-collapse">
                     <thead>
@@ -81,7 +132,7 @@
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-pink-50 text-sm">
-                        <template x-for="stream in filteredStreams()" :key="stream.id">
+                        <template x-for="stream in filteredStreams()" :key="'table-'+stream.id">
                             <tr class="hover:bg-pink-50/30 transition-colors" :class="isWatched(stream.id) ? 'bg-pink-50/15' : ''">
                                 <td class="py-4 px-4 text-center">
                                     <input type="checkbox" :checked="isWatched(stream.id)" @change="toggleWatched(stream.id)" class="w-4 h-4 rounded border-pink-300 text-pink-500 focus:ring-pink-400 cursor-pointer accent-pink-500">
@@ -116,10 +167,11 @@
                     </tbody>
                 </table>
             </div>
-            <template x-if="filteredStreams().length === 0">
-                <div class="p-12 text-center text-slate-400 font-medium">該当する配信データが見つかりません。</div>
-            </template>
         </div>
+
+        <template x-if="filteredStreams().length === 0">
+            <div class="bg-white rounded-2xl border border-pink-100 p-12 text-center text-slate-400 font-medium shadow-xs">該当する配信データが見つかりません。</div>
+        </template>
 
         <div x-show="modalOpen" x-transition class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/30 backdrop-blur-xs" @click.self="closeModal()" style="display: none;">
             <div class="bg-white rounded-2xl shadow-xl border border-pink-100 max-w-md w-full overflow-hidden transform transition-all">
@@ -134,7 +186,7 @@
                     </div>
                     <div>
                         <span class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">プロフィール</span>
-                        <div class="text-slate-700 bg-pink-50/20 p-3 rounded-xl whitespace-pre-wrap text-xs border border-pink-50 leading-relaxed" x-text="selectedPc.profile || '未登録'"></div>
+                        <div class="text-slate-700 bg-pink-50/20 p-3 rounded-xl whitespace-pre-wrap text-xs border border-pink-50/50 leading-relaxed" x-text="selectedPc.profile || '未登録'"></div>
                     </div>
                     <div>
                         <span class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">継続セッション数 / 履歴</span>
