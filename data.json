@@ -1,16 +1,16 @@
 {
-  "updatedAt": "2026/07/02 13:56:01",
+  "updatedAt": "2026/07/02",
   "streams": [
     {
       "id": 1,
-      "date": "2020/06/20 00:00",
+      "date": "2020/06/20",
       "scenario": "Awaken from a nightare!",
       "system": "DX3",
       "gm": "茶越きよか",
       "characters": [
         {
           "pcName": "歌衣メイカ",
-          "plName": "",
+          "plName": "歌衣メイカ",
           "history": "",
           "profile": "",
           "charasheetUrl": "",
@@ -18,7 +18,7 @@
         },
         {
           "pcName": "赤井銀三",
-          "plName": "",
+          "plName": "天開司",
           "history": "",
           "profile": "",
           "charasheetUrl": "",
@@ -33,8 +33,107 @@
           "note": ""
         }
       ],
-      "url": "https://www.youtube.com/live/CXOTF-J41HI?feature=share,https://www.youtube.com/live/AChv0f2A5OU?feature=share",
+      "links": [
+        {
+          "label": "前編",
+          "url": "https://www.youtube.com/live/CXOTF-J41HI?feature=share"
+        },
+        {
+          "label": "後編",
+          "url": "https://www.youtube.com/live/AChv0f2A5OU?feature=share"
+        }
+      ],
       "hashtag": "ダブルクロスXX",
+      "note": ""
+    },
+    {
+      "id": 2,
+      "date": "2020/07/06",
+      "scenario": "I wish…",
+      "system": "CoC6版",
+      "gm": "夢オチ, あまちじょんこ",
+      "characters": [
+        {
+          "pcName": "アーファル・ウェスト・クレー",
+          "plName": "九条林檎",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        },
+        {
+          "pcName": "シェリー・ウィンストン",
+          "plName": "ユキミお姉ちゃん",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        },
+        {
+          "pcName": "ロブ・テイラー・ハイランド",
+          "plName": "コーサカ",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        },
+        {
+          "pcName": "マイケル・ヴァン・ライアン",
+          "plName": "育良啓一郎",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/PQj3dHTg9UY?feature=share"
+        }
+      ],
+      "hashtag": "SCPクトゥルフ",
+      "note": ""
+    },
+    {
+      "id": 3,
+      "date": "2020/07/19",
+      "scenario": "Life goes on ～人生は続く～",
+      "system": "CoC6版",
+      "gm": "ぱぱびっぷ",
+      "characters": [
+        {
+          "pcName": "知多羽留須",
+          "plName": "天開司",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        },
+        {
+          "pcName": "猫柳靖実",
+          "plName": "佐藤ホームズ",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        },
+        {
+          "pcName": "右成葵",
+          "plName": "コーサカ",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/ZBa1rLA3J3Y?feature=share"
+        }
+      ],
+      "hashtag": "LGO7",
       "note": ""
     }
   ]
