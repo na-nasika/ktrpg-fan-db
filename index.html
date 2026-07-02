@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>コーサカTRPGまとめ [非公式]</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Google Fonts: M PLUS 1p & Noto Sans JP -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;800;900&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
         body {
@@ -26,7 +23,6 @@
 
     <div x-data="app()" x-init="initApp()" class="max-w-6xl mx-auto px-4 py-6 sm:py-8">
         
-        <!-- ヘッダーエリア -->
         <header class="mb-6 sm:mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 pb-5 border-b border-pink-200">
             <div class="flex items-center gap-3">
                 <span class="text-2xl inline-block transform rotate-[-12deg] select-none text-pink-500">🦇</span>
@@ -38,15 +34,12 @@
             </div>
         </header>
 
-        <!-- フィルターエリア -->
         <div class="bg-white p-4 sm:p-5 rounded-2xl border border-pink-100 mb-6 space-y-4 shadow-xs">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <!-- キーワード検索 -->
                 <div>
                     <input type="text" x-model="searchQuery" placeholder="🔍 シナリオ、システム、PL、PC名..." class="w-full bg-pink-50/20 border border-pink-150 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition-all">
                 </div>
 
-                <!-- 期間フィルター -->
                 <div class="md:col-span-2 flex flex-col sm:flex-row sm:items-center gap-2">
                     <div class="flex items-center w-full bg-pink-50/20 border border-pink-150 rounded-xl px-3 py-1">
                         <span class="text-[11px] font-bold text-pink-400 mr-2 whitespace-nowrap sm:hidden">開始</span>
@@ -60,36 +53,28 @@
                 </div>
             </div>
 
-            <!-- 下段：ボタン配置 -->
             <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-pink-50 text-xs">
                 <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto">
-                    <!-- 配役トグル -->
                     <div class="inline-flex gap-1 bg-pink-50/60 p-1 rounded-xl border border-pink-100">
                         <button @click="toggleRole('gm')" :class="kosakaRole === 'gm' ? 'bg-pink-500 text-white font-bold shadow-xs' : 'text-slate-600 hover:bg-pink-100/50'" class="px-4 py-1.5 rounded-lg transition-all cursor-pointer">GM</button>
                         <button @click="toggleRole('pl')" :class="kosakaRole === 'pl' ? 'bg-pink-500 text-white font-bold shadow-xs' : 'text-slate-600 hover:bg-pink-100/50'" class="px-4 py-1.5 rounded-lg transition-all cursor-pointer">PL</button>
                     </div>
 
-                    <!-- ステータストグル -->
                     <div class="inline-flex gap-1 bg-pink-50/60 p-1 rounded-xl border border-pink-100">
                         <button @click="toggleStatus('watched')" :class="selectedStatus === 'watched' ? 'bg-pink-500 text-white font-bold shadow-xs' : 'text-slate-600 hover:bg-pink-100/50'" class="px-4 py-1.5 rounded-lg transition-all cursor-pointer">✅ 視聴済み</button>
                         <button @click="toggleStatus('unwatched')" :class="selectedStatus === 'unwatched' ? 'bg-pink-500 text-white font-bold shadow-xs' : 'text-slate-600 hover:bg-pink-100/50'" class="px-4 py-1.5 rounded-lg transition-all cursor-pointer">⬜ 未視聴</button>
                     </div>
                 </div>
 
-                <!-- 日付ソート -->
                 <button @click="toggleSortOrder()" class="ml-auto sm:ml-0 border border-pink-200 hover:bg-pink-50/50 text-slate-600 font-medium px-4 py-1.5 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer">
                     <span x-text="sortOrder === 'desc' ? '📅 新しい順' : '📅 古い順'"></span>
                 </button>
             </div>
         </div>
 
-        <!-- ＝ー＝ー＝ー＝ 一覧エリア ＝ー＝ー＝ー＝ -->
-
-        <!-- 📱 スマホ用レイアウト：カード型（サムネイル対応版） -->
         <div class="block md:hidden space-y-4">
             <template x-for="stream in filteredStreams()" :key="'card-'+stream.id">
                 <div class="bg-white rounded-2xl border border-pink-100 p-4 shadow-xs space-y-3 transition-colors" :class="isWatched(stream.id) ? 'bg-pink-50/10' : ''">
-                    <!-- 上段：日付と視聴チェック -->
                     <div class="flex items-center justify-between border-b border-pink-50 pb-2">
                         <span class="text-xs text-slate-400 font-medium" x-text="stream.date"></span>
                         <label class="flex items-center gap-1.5 text-xs text-slate-500 cursor-pointer select-none">
@@ -98,37 +83,30 @@
                         </label>
                     </div>
 
-                    <!-- 中段：サムネイル ＆ シナリオ情報（横並びでスッキリ収める） -->
                     <div class="flex gap-3 items-start">
-                        <!-- 自動取得サムネイル（スマホ版：横幅固定のコンパクトサイズ） -->
                         <template x-if="getYoutubeId(stream.links)">
                             <div class="w-28 shrink-0 aspect-video bg-pink-50 rounded-lg overflow-hidden border border-pink-100/60 shadow-2xs">
                                 <img :src="'https://img.youtube.com/vi/' + getYoutubeId(stream.links) + '/mqdefault.jpg'" alt="Thumbnail" class="w-full h-full object-cover">
                             </div>
                         </template>
                         
-                        <!-- サムネがない場合のプレースホルダー（万が一用） -->
                         <template x-if="!getYoutubeId(stream.links)">
                             <div class="w-28 shrink-0 aspect-video bg-pink-50/50 rounded-lg flex items-center justify-center border border-pink-100/40">
                                 <span class="text-[10px] text-pink-300 font-bold">NO IMAGE</span>
                             </div>
                         </template>
 
-                        <!-- シナリオ名とシステム -->
                         <div class="space-y-1 flex-1 min-w-0">
                             <div class="font-bold text-slate-900 tracking-wide text-xs sm:text-sm leading-snug break-words" x-text="stream.scenario"></div>
                             <span class="inline-block bg-slate-100 text-slate-500 text-[9px] sm:text-[10px] px-1.5 py-0.2 rounded-md font-medium" x-text="stream.system"></span>
                         </div>
                     </div>
 
-                    <!-- 下段のさらに下：リンクボタンとお気に入りデザイン -->
                     <div class="flex items-center justify-between gap-2 pt-1">
-                        <!-- GM と PL の簡易テキスト -->
                         <div class="text-[11px] text-slate-500 truncate max-w-[60%]">
                             <span class="font-bold text-slate-400">GM:</span> <span x-text="stream.gm"></span>
                         </div>
                         
-                        <!-- 右側：お気に入りの縦並びリンク（完全維持） -->
                         <div class="flex flex-col gap-1 w-24 shrink-0 text-center">
                             <template x-for="link in stream.links">
                                 <a :href="link.url" target="_blank" class="inline-block w-full bg-pink-500 hover:bg-pink-600 text-white text-[10px] py-0.5 px-1.5 rounded-lg font-medium transition-colors shadow-xs" x-text="link.label"></a>
@@ -139,7 +117,6 @@
                         </div>
                     </div>
 
-                    <!-- キャスト情報詳細ボックス -->
                     <div class="bg-pink-50/20 rounded-xl p-2.5 text-[11px] border border-pink-50/50 flex flex-wrap gap-1">
                         <span class="text-slate-400 font-bold mr-1 shrink-0">PL:</span>
                         <div class="flex flex-wrap gap-1 flex-1">
@@ -154,7 +131,6 @@
             </template>
         </div>
 
-        <!-- 🖥️ PC用レイアウト：従来の横長テーブル（サムネイル列追加版） -->
         <div class="hidden md:block bg-white rounded-2xl border border-pink-100 overflow-hidden shadow-xs">
             <div class="overflow-x-auto">
                 <table class="w-full text-left border-collapse">
@@ -172,13 +148,10 @@
                     <tbody class="divide-y divide-pink-50 text-sm">
                         <template x-for="stream in filteredStreams()" :key="'table-'+stream.id">
                             <tr class="hover:bg-pink-50/30 transition-colors" :class="isWatched(stream.id) ? 'bg-pink-50/15' : ''">
-                                <!-- 視聴チェック -->
                                 <td class="py-4 px-4 text-center">
                                     <input type="checkbox" :checked="isWatched(stream.id)" @change="toggleWatched(stream.id)" class="w-4 h-4 rounded border-pink-300 text-pink-500 focus:ring-pink-400 cursor-pointer accent-pink-500">
                                 </td>
-                                <!-- 配信日 -->
                                 <td class="py-4 px-4 text-slate-400 font-medium text-xs" x-text="stream.date"></td>
-                                <!-- PC版：サムネイル画像列 -->
                                 <td class="py-4 px-4">
                                     <template x-if="getYoutubeId(stream.links)">
                                         <div class="w-24 aspect-video bg-pink-50 rounded-lg overflow-hidden border border-pink-100/60 shadow-2xs transform hover:scale-105 transition-transform duration-200">
@@ -191,14 +164,11 @@
                                         </div>
                                     </template>
                                 </td>
-                                <!-- シナリオ / システム -->
                                 <td class="py-4 px-4">
                                     <div class="font-bold text-slate-900 tracking-wide leading-snug" x-text="stream.scenario"></div>
                                     <span class="inline-block bg-slate-100 text-slate-500 text-[11px] px-2 py-0.5 rounded-md mt-1.5 font-medium" x-text="stream.system"></span>
                                 </td>
-                                <!-- GM -->
                                 <td class="py-4 px-4 font-medium text-slate-700 text-xs" x-text="stream.gm"></td>
-                                <!-- PL (PC) -->
                                 <td class="py-4 px-4">
                                     <div class="flex flex-wrap gap-1.5">
                                         <template x-for="char in stream.characters">
@@ -208,7 +178,6 @@
                                         </template>
                                     </div>
                                 </td>
-                                <!-- リンク -->
                                 <td class="py-4 px-4 text-center">
                                     <div class="flex flex-col gap-1">
                                         <template x-for="link in stream.links">
@@ -226,12 +195,10 @@
             </div>
         </div>
 
-        <!-- データゼロ表示 -->
         <template x-if="filteredStreams().length === 0">
             <div class="bg-white rounded-2xl border border-pink-100 p-12 text-center text-slate-400 font-medium shadow-xs">該当する配信データが見つかりません。</div>
         </template>
 
-        <!-- PC詳細ポップアップ (モダール) -->
         <div x-show="modalOpen" x-transition class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/30 backdrop-blur-xs" @click.self="closeModal()" style="display: none;">
             <div class="bg-white rounded-2xl shadow-xl border border-pink-100 max-w-md w-full overflow-hidden transform transition-all">
                 <div class="bg-slate-900 px-6 py-4 flex justify-between items-center text-white">
@@ -266,7 +233,6 @@
 
     </div>
 
-    <!-- スクリプト部 -->
     <script>
         function app() {
             return {
@@ -301,18 +267,36 @@
                     }
                 },
 
-                // YouTubeのURLから動画IDを自動抽出する凄腕プログラム
+                // あらゆるYouTubeリンク形式から完全に動画IDを引っこ抜く強化版ロジック
                 getYoutubeId(links) {
                     if (!links || links.length === 0) return null;
-                    // links配列の中から、labelが「YouTube」になっているものを探す
                     const ytLink = links.find(l => l.label && l.label.includes('YouTube'));
                     if (!ytLink || !ytLink.url) return null;
 
-                    // 通常のURL、共有用URL、埋め込み用URLなどあらゆる形式に対応する正規表現
-                    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-                    const match = ytLink.url.match(regExp);
+                    const url = ytLink.url.trim();
                     
-                    return (match && match[2].length === 11) ? match[2] : null;
+                    // 1. 通常の watch?v= 形式
+                    if (url.includes('watch?v=')) {
+                        const parts = url.split('v=');
+                        if (parts[1]) return parts[1].split('&')[0];
+                    }
+                    
+                    // 2. /live/, /shorts/, /embed/ 形式をすべてカバー
+                    const pathTypes = ['/live/', '/shorts/', '/embed/'];
+                    for (const type of pathTypes) {
+                        if (url.includes(type)) {
+                            const parts = url.split(type);
+                            if (parts[1]) return parts[1].split('?')[0].split('&')[0];
+                        }
+                    }
+                    
+                    // 3. youtu.be/ 共有用形式
+                    if (url.includes('youtu.be/')) {
+                        const parts = url.split('youtu.be/');
+                        if (parts[1]) return parts[1].split('?')[0].split('&')[0];
+                    }
+
+                    return null;
                 },
 
                 toggleRole(role) {
