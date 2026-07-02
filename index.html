@@ -17,7 +17,6 @@
         ::-webkit-scrollbar-track { background: #fff5f5; }
         ::-webkit-scrollbar-thumb { background: #f472b6; border-radius: 3px; }
         ::-webkit-scrollbar-thumb:hover { background: #ec4899; }
-        /* Alpine.jsの初期チラつき防止＆スマホ表示バグ対策 */
         [x-cloak] { display: none !important; }
     </style>
 </head>
@@ -25,28 +24,31 @@
 
     <div x-data="app()" x-init="initApp()" class="max-w-6xl mx-auto px-4 py-6 sm:py-8" x-cloak>
         
+        <!-- ヘッダーエリア（🦇の余白を極限までタイトに調整） -->
         <header class="mb-5 sm:mb-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 pb-5 border-b border-pink-200">
-            <div class="flex items-center gap-3">
-                <span class="text-2xl inline-block transform rotate-[-12deg] select-none text-pink-500">🦇</span>
+            <div class="flex items-center gap-1">
+                <span class="text-2xl inline-block transform rotate-[-12deg] select-none text-pink-500 w-8 text-center">🦇</span>
                 <h1 class="text-xl sm:text-2xl font-black text-slate-900 tracking-wider">コーサカTRPGまとめ</h1>
-                <span class="text-[10px] bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full font-bold border border-pink-200 tracking-wide">非公式</span>
+                <span class="text-[10px] bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full font-bold border border-pink-200 tracking-wide ml-2">非公式</span>
             </div>
             
+            <!-- 総数カウンター（最終更新を日付のみに修正） -->
             <div class="text-xs text-slate-400 font-medium tracking-tight flex flex-wrap items-center gap-x-4 gap-y-1 sm:justify-end">
                 <div>
                     該当セッション: <span x-text="filteredStreams().length" class="text-pink-600 font-black text-sm"></span> <span class="text-[11px] font-bold text-slate-400">件</span>
                 </div>
                 <div class="hidden sm:block text-pink-200">|</div>
                 <div>
-                    最終更新: <span x-text="updatedAt" class="text-pink-600 font-bold"></span>
+                    最終更新: <span x-text="formatDateOnly(updatedAt)" class="text-pink-600 font-bold"></span>
                 </div>
             </div>
         </header>
 
+        <!-- フィルターエリア（ご指定のシンプルなプレースホルダーに変更） -->
         <div class="bg-white p-3 sm:p-4 rounded-2xl border border-pink-100 mb-6 space-y-3 shadow-sm">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
                 <div>
-                    <input type="text" x-model="searchQuery" placeholder="🔍 シナリオ、システム、PL、備考の言葉..." class="w-full bg-pink-50/10 border border-pink-200 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition-all">
+                    <input type="text" x-model="searchQuery" placeholder="🔍 シナリオ、PL、PCなど..." class="w-full bg-pink-50/10 border border-pink-200 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent transition-all">
                 </div>
 
                 <div class="md:col-span-2 flex flex-col sm:flex-row sm:items-center gap-2">
@@ -81,6 +83,7 @@
             </div>
         </div>
 
+        <!-- スマホ用カードレイアウト -->
         <div class="block md:hidden space-y-4">
             <template x-for="stream in filteredStreams()" :key="'card-'+stream.id">
                 <div @click="openModal(stream)" class="bg-white rounded-2xl border border-pink-100 p-4 shadow-sm space-y-3 transition-colors cursor-pointer" :class="isWatched(stream.id) ? 'bg-pink-50/10' : ''">
@@ -140,6 +143,7 @@
             </template>
         </div>
 
+        <!-- PC用テーブルレイアウト -->
         <div class="hidden md:block bg-white rounded-2xl border border-pink-100 overflow-hidden shadow-sm">
             <div class="overflow-x-auto">
                 <table class="w-full text-left border-collapse min-w-[950px]">
@@ -204,20 +208,25 @@
             </div>
         </div>
 
+        <!-- データ未検出プレースホルダー -->
         <template x-if="filteredStreams().length === 0 && updatedAt !== '同期中...'">
             <div class="bg-white rounded-2xl border border-pink-100 p-12 text-center text-slate-400 font-medium shadow-sm">該当する配信データが見つかりません。</div>
         </template>
 
+        <!-- ✨ 統合モーダルウインドウ -->
         <div x-show="modalOpen" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40" @click.self="closeModal()" style="display: none;">
             <div class="bg-white rounded-2xl shadow-xl border border-pink-100 max-w-md w-full overflow-hidden flex flex-col max-h-[85vh] relative z-50">
                 
+                <!-- モーダルヘッダー -->
                 <div class="bg-slate-900 px-6 py-4 flex justify-between items-center text-white shrink-0">
                     <h3 class="font-bold text-sm tracking-wider truncate mr-4" x-text="activeStream.scenario"></h3>
                     <button @click="closeModal()" class="text-white/60 hover:text-white text-2xl font-light transition-colors leading-none cursor-pointer">&times;</button>
                 </div>
                 
+                <!-- モーダルボディ -->
                 <div class="p-6 space-y-4 text-xs sm:text-sm flex-1 overflow-y-auto bg-white">
                     
+                    <!-- ① みんなへのメモ -->
                     <template x-if="activeStream.adminNote">
                         <div class="text-slate-700 bg-pink-50/30 p-3 rounded-xl border border-pink-100 leading-relaxed font-normal flex gap-1.5 items-start">
                             <span class="shrink-0 select-none">💡</span>
@@ -225,6 +234,7 @@
                         </div>
                     </template>
 
+                    <!-- ② 関連リンクボタン -->
                     <template x-if="activeStream.relatedLinks && activeStream.relatedLinks.length > 0">
                         <div class="flex flex-col gap-1.5 pt-1">
                             <template x-for="rLink in activeStream.relatedLinks">
@@ -233,6 +243,7 @@
                         </div>
                     </template>
 
+                    <!-- ③ プレイヤー & キャラクター詳細 -->
                     <div class="space-y-3">
                         <template x-for="char in activeStream.characters">
                             <template x-if="char.profile || char.history || char.note || char.charasheetUrl">
@@ -295,7 +306,7 @@
                     }
                     
                     try {
-                        // 👇 【重要】ここのURLだけご自身のものになっているか再度ご確認ください！
+                        // 👇 【超重要】ご自身の公開URLになっているか必ずご確認ください！
                         const response = await fetch('https://na-nasika.github.io/ktrpg-fan-db/data.json');
                         if (!response.ok) throw new Error('データが見つかりません');
                         const data = await response.json();
@@ -306,6 +317,12 @@
                         console.error("データの読み込みに失敗しました:", error);
                         this.updatedAt = "読み込みエラー";
                     }
+                },
+
+                // 最終更新日時の文字列から時間部分をカットして「日付のみ」にする便利関数
+                formatDateOnly(dateTimeStr) {
+                    if (!dateTimeStr || dateTimeStr === "同期中..." || dateTimeStr === "読み込みエラー") return dateTimeStr;
+                    return dateTimeStr.split(" ")[0]; // 「2026/02/08 14:30」を「2026/02/08」に分割して返す
                 },
 
                 getYoutubeId(links) {
