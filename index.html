@@ -133,16 +133,16 @@
 
         <div class="hidden md:block bg-white rounded-2xl border border-pink-100 overflow-hidden shadow-xs">
             <div class="overflow-x-auto">
-                <table class="w-full text-left border-collapse">
+                <table class="w-full text-left border-collapse min-w-[950px]">
                     <thead>
                         <tr class="bg-pink-50/30 border-b border-pink-100 text-xs font-bold text-slate-500 tracking-wider">
-                            <th class="py-3.5 px-4 w-14 text-center">視聴</th>
-                            <th class="py-3.5 px-4 w-24">配信日</th>
-                            <th class="py-3.5 px-4 w-28">サムネイル</th>
-                            <th class="py-3.5 px-4">シナリオ / システム</th>
-                            <th class="py-3.5 px-4 w-28">GM</th>
-                            <th class="py-3.5 px-4">PL (PC ※クリックで詳細)</th>
-                            <th class="py-3.5 px-4 w-28 text-center">リンク</th>
+                            <th class="py-4 px-4 w-14 text-center">視聴</th>
+                            <th class="py-4 px-4 w-28">配信日</th>
+                            <th class="py-4 px-4 w-32">サムネイル</th>
+                            <th class="py-4 px-4">シナリオ / システム</th>
+                            <th class="py-4 px-4 w-36">GM</th>
+                            <th class="py-4 px-4">PL (PC ※詳細表示)</th>
+                            <th class="py-4 px-4 w-36 text-center">リンク</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-pink-50 text-sm">
@@ -151,7 +151,7 @@
                                 <td class="py-4 px-4 text-center">
                                     <input type="checkbox" :checked="isWatched(stream.id)" @change="toggleWatched(stream.id)" class="w-4 h-4 rounded border-pink-300 text-pink-500 focus:ring-pink-400 cursor-pointer accent-pink-500">
                                 </td>
-                                <td class="py-4 px-4 text-slate-400 font-medium text-xs" x-text="stream.date"></td>
+                                <td class="py-4 px-4 text-slate-400 font-semibold" x-text="stream.date"></td>
                                 <td class="py-4 px-4">
                                     <template x-if="getYoutubeId(stream.links)">
                                         <div class="w-24 aspect-video bg-pink-50 rounded-lg overflow-hidden border border-pink-100/60 shadow-2xs transform hover:scale-105 transition-transform duration-200">
@@ -165,26 +165,26 @@
                                     </template>
                                 </td>
                                 <td class="py-4 px-4">
-                                    <div class="font-bold text-slate-900 tracking-wide leading-snug" x-text="stream.scenario"></div>
-                                    <span class="inline-block bg-slate-100 text-slate-500 text-[11px] px-2 py-0.5 rounded-md mt-1.5 font-medium" x-text="stream.system"></span>
+                                    <div class="font-bold text-slate-900 tracking-wide text-[15px] leading-snug" x-text="stream.scenario"></div>
+                                    <span class="inline-block bg-slate-100 text-slate-500 text-xs px-2 py-0.5 rounded-md mt-2 font-medium" x-text="stream.system"></span>
                                 </td>
-                                <td class="py-4 px-4 font-medium text-slate-700 text-xs" x-text="stream.gm"></td>
+                                <td class="py-4 px-4 font-bold text-slate-700" x-text="stream.gm"></td>
                                 <td class="py-4 px-4">
                                     <div class="flex flex-wrap gap-1.5">
                                         <template x-for="char in stream.characters">
-                                            <button @click="openModal(char)" class="bg-pink-50/50 text-pink-700 hover:bg-pink-100/60 text-xs font-medium px-2 py-0.5 rounded-lg cursor-pointer border border-pink-100/30 transition-colors">
+                                            <button @click="openModal(char)" class="bg-pink-50/50 text-pink-700 hover:bg-pink-100/60 text-xs font-medium px-2.5 py-1 rounded-xl cursor-pointer border border-pink-100/40 transition-colors">
                                                 <span x-text="char.plName ? char.plName + '（' + char.pcName + '）' : char.pcName"></span>
                                             </button>
                                         </template>
                                     </div>
                                 </td>
                                 <td class="py-4 px-4 text-center">
-                                    <div class="flex flex-col gap-1">
+                                    <div class="flex flex-col gap-1.5 max-w-[120px] mx-auto">
                                         <template x-for="link in stream.links">
-                                            <a :href="link.url" target="_blank" class="inline-block w-full bg-pink-500 hover:bg-pink-600 text-white text-[10px] py-0.5 px-1.5 rounded-lg font-medium transition-colors shadow-xs" x-text="link.label"></a>
+                                            <a :href="link.url" target="_blank" class="inline-block w-full bg-pink-500 hover:bg-pink-600 text-white text-[11px] py-1 px-2 rounded-lg font-medium transition-colors shadow-xs tracking-wider" x-text="link.label"></a>
                                         </template>
                                         <template x-if="stream.hashtag">
-                                            <a :href="'https://x.com/search?q=' + encodeURIComponent(stream.hashtag)" target="_blank" class="inline-block w-full bg-slate-700 hover:bg-slate-600 text-white text-[9px] py-0.5 px-1.5 rounded-lg font-normal transition-colors overflow-hidden text-ellipsis whitespace-nowrap" x-text="stream.hashtag"></a>
+                                            <a :href="'https://x.com/search?q=' + encodeURIComponent(stream.hashtag)" target="_blank" class="inline-block w-full bg-slate-700 hover:bg-slate-600 text-white text-[10px] py-0.5 px-2 rounded-lg font-normal transition-colors overflow-hidden text-ellipsis whitespace-nowrap" x-text="stream.hashtag"></a>
                                         </template>
                                     </div>
                                 </td>
@@ -267,11 +267,9 @@
                     }
                 },
 
-                // 完全にURLの中身だけでYouTubeリンクを仕留める超天才ロジック
                 getYoutubeId(links) {
                     if (!links || links.length === 0) return null;
                     
-                    // 名前に頼らず、URLの中に youtube.com または youtu.be が含まれている最初のリンクを探す
                     const ytLink = links.find(l => l.url && (l.url.includes('youtube.com') || l.url.includes('youtu.be')));
                     if (!ytLink || !ytLink.url) return null;
 
