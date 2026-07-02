@@ -267,21 +267,23 @@
                     }
                 },
 
-                // あらゆるYouTubeリンク形式から完全に動画IDを引っこ抜く強化版ロジック
+                // リンクが複数あっても、確実に最初のYouTubeリンクを仕留めるロジック
                 getYoutubeId(links) {
                     if (!links || links.length === 0) return null;
-                    const ytLink = links.find(l => l.label && l.label.includes('YouTube'));
+                    
+                    // 1. まず配列の「すべての要素」から、名前に「YouTube」が入っているものを根こそぎ探す
+                    const ytLink = links.find(l => l.label && l.label.toLowerCase().includes('youtube'));
                     if (!ytLink || !ytLink.url) return null;
 
                     const url = ytLink.url.trim();
                     
-                    // 1. 通常の watch?v= 形式
+                    // 2. 通常の watch?v= 形式
                     if (url.includes('watch?v=')) {
                         const parts = url.split('v=');
                         if (parts[1]) return parts[1].split('&')[0];
                     }
                     
-                    // 2. /live/, /shorts/, /embed/ 形式をすべてカバー
+                    // 3. /live/, /shorts/, /embed/ 形式をすべてカバー
                     const pathTypes = ['/live/', '/shorts/', '/embed/'];
                     for (const type of pathTypes) {
                         if (url.includes(type)) {
@@ -290,7 +292,7 @@
                         }
                     }
                     
-                    // 3. youtu.be/ 共有用形式
+                    // 4. youtu.be/ 共有用形式
                     if (url.includes('youtu.be/')) {
                         const parts = url.split('youtu.be/');
                         if (parts[1]) return parts[1].split('?')[0].split('&')[0];
