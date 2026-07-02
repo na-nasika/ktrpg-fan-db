@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026/07/02",
+  "updatedAt": "2026/07/02 23:13",
   "streams": [
     {
-      "id": 1,
+      "id": "stream_1",
       "date": "2020/06/20",
       "scenario": "Awaken from a nightare!",
       "system": "DX3",
@@ -44,10 +44,11 @@
         }
       ],
       "hashtag": "ダブルクロスXX",
-      "note": "メモ　テスト"
+      "adminNote": "メモ　テスト",
+      "relatedLinks": []
     },
     {
-      "id": 2,
+      "id": "stream_2",
       "date": "2020/07/06",
       "scenario": "I wish…",
       "system": "CoC6版",
@@ -93,10 +94,11 @@
         }
       ],
       "hashtag": "SCPクトゥルフ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 3,
+      "id": "stream_3",
       "date": "2020/07/19",
       "scenario": "Life goes on ～人生は続く～",
       "system": "CoC6版",
@@ -121,7 +123,7 @@
         {
           "pcName": "右成葵",
           "plName": "コーサカ",
-          "history": "",
+          "history": "①LGO（https://www.youtube.com/live/ZBa1rLA3J3Y?feature=share）\n②カタシロ（https://www.youtube.com/live/7JGxrJCtF4Y?feature=share）",
           "profile": "",
           "charasheetUrl": "",
           "note": ""
@@ -134,10 +136,11 @@
         }
       ],
       "hashtag": "LGO7",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 4,
+      "id": "stream_4",
       "date": "2020/11/09",
       "scenario": "カタシロ",
       "system": "CoC7版",
@@ -146,7 +149,7 @@
         {
           "pcName": "右成葵",
           "plName": "コーサカ",
-          "history": "",
+          "history": "①LGO（https://www.youtube.com/live/ZBa1rLA3J3Y?feature=share）\n②カタシロ（https://www.youtube.com/live/7JGxrJCtF4Y?feature=share）",
           "profile": "",
           "charasheetUrl": "",
           "note": ""
@@ -163,10 +166,11 @@
         }
       ],
       "hashtag": "ぱぱシロ02",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 5,
+      "id": "stream_5",
       "date": "2020/11/27",
       "scenario": "壊胎",
       "system": "CoC6版",
@@ -196,10 +200,11 @@
         }
       ],
       "hashtag": "佐藤コーサ壊胎",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 6,
+      "id": "stream_6",
       "date": "2020/12/08",
       "scenario": "Freedom exist",
       "system": "DX3",
@@ -237,10 +242,11 @@
         }
       ],
       "hashtag": "ダブルクロスXX",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 7,
+      "id": "stream_7",
       "date": "2020/12/31",
       "scenario": "狂気山脈 ～邪神の山嶺～",
       "system": "CoC7版",
@@ -286,10 +292,11 @@
         }
       ],
       "hashtag": "狂気山脈V4",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 8,
+      "id": "stream_8",
       "date": "2021/01/09",
       "scenario": "沼男は誰だ？",
       "system": "CoC6版",
@@ -339,10 +346,11 @@
         }
       ],
       "hashtag": "RPうまお沼",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 9,
+      "id": "stream_9",
       "date": "2021/02/02",
       "scenario": "ぼくらのシャングリラ、あの子のほうき星",
       "system": "CoC6版",
@@ -388,10 +396,11 @@
         }
       ],
       "hashtag": "仲良しぼくシャン",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 10,
+      "id": "stream_10",
       "date": "2021/02/07",
       "scenario": "Dlma",
       "system": "CoC6版",
@@ -429,10 +438,11 @@
         }
       ],
       "hashtag": "いきなりDlma",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 11,
+      "id": "stream_11",
       "date": "2021/02/09",
       "scenario": "暗闇の中、傍に立つ",
       "system": "CoC7版",
@@ -482,10 +492,11 @@
         }
       ],
       "hashtag": "暗闇の中俺らがいる",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 12,
+      "id": "stream_12",
       "date": "2021/02/13",
       "scenario": "忘れじの理想郷",
       "system": "CoC7版",
@@ -527,10 +538,11 @@
         }
       ],
       "hashtag": "れじの09",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 13,
+      "id": "stream_13",
       "date": "2021/02/14",
       "scenario": "マジックブルーの境界線",
       "system": "CoC6版",
@@ -568,10 +580,11 @@
         }
       ],
       "hashtag": "マジックブルーの境界線00",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 14,
+      "id": "stream_14",
       "date": "2021/02/16",
       "scenario": "カタシロアナザー",
       "system": "CoC7版",
@@ -597,10 +610,11 @@
         }
       ],
       "hashtag": "サカシロアナザー",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 15,
+      "id": "stream_15",
       "date": "2021/02/20",
       "scenario": "emotional",
       "system": "CoC6版",
@@ -646,10 +660,11 @@
         }
       ],
       "hashtag": "たこすきeosional",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 16,
+      "id": "stream_16",
       "date": "2021/02/21",
       "scenario": "とある幸せな家族の話",
       "system": "CoC6版",
@@ -695,10 +710,11 @@
         }
       ],
       "hashtag": "弥栄家",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 17,
+      "id": "stream_17",
       "date": "2021/03/06",
       "scenario": "激突！コズミックウェディングvsビッグバンブライド！！",
       "system": "CoC6版",
@@ -744,10 +760,11 @@
         }
       ],
       "hashtag": "コズバン03",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 18,
+      "id": "stream_18",
       "date": "2021/03/15",
       "scenario": "彼方からの君に捧ぐ",
       "system": "CoC6版",
@@ -797,10 +814,11 @@
         }
       ],
       "hashtag": "俺らからの君に捧ぐ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 19,
+      "id": "stream_19",
       "date": "2021/03/23",
       "scenario": "とある天才文筆家の消失",
       "system": "CoC6版",
@@ -830,10 +848,11 @@
         }
       ],
       "hashtag": "彷徨するコーホム",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 20,
+      "id": "stream_20",
       "date": "2021/03/24",
       "scenario": "帰らじの理想郷",
       "system": "CoC7版",
@@ -871,10 +890,11 @@
         }
       ],
       "hashtag": "帰らじのマッスル",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 21,
+      "id": "stream_21",
       "date": "2021/03/25",
       "scenario": "1072",
       "system": "エモクロア",
@@ -896,10 +916,11 @@
         }
       ],
       "hashtag": "ぱぱびっぷの1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 22,
+      "id": "stream_22",
       "date": "2021/03/28",
       "scenario": "マジックブルーの境界線",
       "system": "エモクロア",
@@ -937,10 +958,11 @@
         }
       ],
       "hashtag": "マジックブルーの境界線01",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 23,
+      "id": "stream_23",
       "date": "2021/03/31",
       "scenario": "松迎物語",
       "system": "CoC6版",
@@ -986,10 +1008,11 @@
         }
       ],
       "hashtag": "RP強者の松迎物語",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 24,
+      "id": "stream_24",
       "date": "2021/04/01",
       "scenario": "彼方への羨望",
       "system": "CoC7版",
@@ -1019,10 +1042,11 @@
         }
       ],
       "hashtag": "チャイナと高校生探偵の羨望",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 25,
+      "id": "stream_25",
       "date": "2021/04/01",
       "scenario": "1072",
       "system": "エモクロア",
@@ -1044,10 +1068,11 @@
         }
       ],
       "hashtag": "むつーの1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 26,
+      "id": "stream_26",
       "date": "2021/04/03",
       "scenario": "傀逅",
       "system": "CoC6版",
@@ -1081,10 +1106,11 @@
         }
       ],
       "hashtag": "佐藤コーサ傀逅",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 27,
+      "id": "stream_27",
       "date": "2021/04/05",
       "scenario": "1072",
       "system": "エモクロア",
@@ -1106,10 +1132,11 @@
         }
       ],
       "hashtag": "健屋の1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 28,
+      "id": "stream_28",
       "date": "2021/04/07",
       "scenario": "まれびとこぞりて",
       "system": "CoC6版",
@@ -1147,10 +1174,11 @@
         }
       ],
       "hashtag": "かねもちこぞりて",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 29,
+      "id": "stream_29",
       "date": "2021/04/09",
       "scenario": "1072",
       "system": "エモクロア",
@@ -1172,10 +1200,11 @@
         }
       ],
       "hashtag": "ディズムの1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 30,
+      "id": "stream_30",
       "date": "2021/04/14",
       "scenario": "浅草デリストゥラ",
       "system": "CoC6版",
@@ -1213,10 +1242,11 @@
         }
       ],
       "hashtag": "デリストゥラ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 31,
+      "id": "stream_31",
       "date": "2021/04/18",
       "scenario": "マジックブルーの境界線",
       "system": "エモクロア",
@@ -1254,10 +1284,11 @@
         }
       ],
       "hashtag": "マジックブルーの境界線02",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 32,
+      "id": "stream_32",
       "date": "2021/04/20",
       "scenario": "星の魔女の願い",
       "system": "CoC7版",
@@ -1295,10 +1326,11 @@
         }
       ],
       "hashtag": "鵜篭弟探偵事務所",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 33,
+      "id": "stream_33",
       "date": "2021/04/24",
       "scenario": "1072",
       "system": "エモクロア",
@@ -1320,10 +1352,11 @@
         }
       ],
       "hashtag": "ホームズの1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 34,
+      "id": "stream_34",
       "date": "2021/04/26",
       "scenario": "マジックブルーの境界線",
       "system": "エモクロア",
@@ -1361,10 +1394,11 @@
         }
       ],
       "hashtag": "マジックブルーの境界線03",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 35,
+      "id": "stream_35",
       "date": "2021/04/29",
       "scenario": "マジックブルーの境界線",
       "system": "エモクロア",
@@ -1402,10 +1436,11 @@
         }
       ],
       "hashtag": "マジックブルーの境界線04",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 36,
+      "id": "stream_36",
       "date": "2021/04/30",
       "scenario": "マジックブルーの境界線",
       "system": "エモクロア",
@@ -1443,10 +1478,11 @@
         }
       ],
       "hashtag": "マジックブルーの境界線05",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 37,
+      "id": "stream_37",
       "date": "2021/05/01",
       "scenario": "マジックブルーの境界線",
       "system": "エモクロア",
@@ -1484,10 +1520,11 @@
         }
       ],
       "hashtag": "マジックブルーの境界線06",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 38,
+      "id": "stream_38",
       "date": "2021/05/01",
       "scenario": "鬼の棲む",
       "system": "CoC6版",
@@ -1509,10 +1546,11 @@
         }
       ],
       "hashtag": "コーサカの棲む",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 39,
+      "id": "stream_39",
       "date": "2021/05/05",
       "scenario": "マジックブルーの境界線",
       "system": "エモクロア",
@@ -1550,10 +1588,11 @@
         }
       ],
       "hashtag": "マジックブルーの境界線07",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 40,
+      "id": "stream_40",
       "date": "2021/05/14",
       "scenario": "1072",
       "system": "エモクロア",
@@ -1575,10 +1614,11 @@
         }
       ],
       "hashtag": "黛の1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 41,
+      "id": "stream_41",
       "date": "2021/05/15",
       "scenario": "マジックブルーの境界線",
       "system": "エモクロア",
@@ -1616,10 +1656,11 @@
         }
       ],
       "hashtag": "マジックブルーの境界線08",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 42,
+      "id": "stream_42",
       "date": "2021/05/21",
       "scenario": "闇相撲vs光相撲",
       "system": "エモクロア",
@@ -1649,10 +1690,11 @@
         }
       ],
       "hashtag": "スモクロア01",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 43,
+      "id": "stream_43",
       "date": "2021/05/24",
       "scenario": "仰天遊戯！",
       "system": "CoC7版",
@@ -1690,10 +1732,11 @@
         }
       ],
       "hashtag": "コー高なく遊戯",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 44,
+      "id": "stream_44",
       "date": "2021/05/26",
       "scenario": "命盟",
       "system": "CoC7版",
@@ -1735,10 +1778,11 @@
         }
       ],
       "hashtag": "命盟03",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 45,
+      "id": "stream_45",
       "date": "2021/05/30",
       "scenario": "悪霊の家 Ver.Crawling Chaos",
       "system": "DX3",
@@ -1768,10 +1812,11 @@
         }
       ],
       "hashtag": "CR悪霊の家",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 46,
+      "id": "stream_46",
       "date": "2021/06/16",
       "scenario": "ヴァンパイア・レポート",
       "system": "CoC7版",
@@ -1817,10 +1862,11 @@
         }
       ],
       "hashtag": "ユーマレポ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 47,
+      "id": "stream_47",
       "date": "2021/06/19",
       "scenario": "エイブモズ",
       "system": "CoC6版",
@@ -1858,10 +1904,11 @@
         }
       ],
       "hashtag": "エイブモズ4",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 48,
+      "id": "stream_48",
       "date": "2021/06/26",
       "scenario": "誰がロックを殺すのか",
       "system": "CoC6版",
@@ -1907,10 +1954,11 @@
         }
       ],
       "hashtag": "声が良い誰ロク",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 49,
+      "id": "stream_49",
       "date": "2021/06/27",
       "scenario": "苦難の民は陰界と消ゆ",
       "system": "CoC7版",
@@ -1948,10 +1996,11 @@
         }
       ],
       "hashtag": "苦難のホーサカ大魔王",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 50,
+      "id": "stream_50",
       "date": "2021/07/17",
       "scenario": "源子ノ投影",
       "system": "エモクロア",
@@ -1989,10 +2038,11 @@
         }
       ],
       "hashtag": "源子ノ02",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 51,
+      "id": "stream_51",
       "date": "2021/07/19",
       "scenario": "輾転と町は",
       "system": "CoC6版",
@@ -2030,10 +2080,11 @@
         }
       ],
       "hashtag": "輾転と町は_001",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 52,
+      "id": "stream_52",
       "date": "2021/07/21",
       "scenario": "慟哭の山",
       "system": "CoC7版",
@@ -2063,10 +2114,11 @@
         }
       ],
       "hashtag": "慟哭のぱぱサカ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 53,
+      "id": "stream_53",
       "date": "2021/07/22",
       "scenario": "天使は彼らを救えない",
       "system": "エモクロア",
@@ -2104,10 +2156,11 @@
         }
       ],
       "hashtag": "天救09",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 54,
+      "id": "stream_54",
       "date": "2021/07/31",
       "scenario": "悔いのない明日へ",
       "system": "CoC6版",
@@ -2145,10 +2198,11 @@
         }
       ],
       "hashtag": "コーホム大魔王",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 55,
+      "id": "stream_55",
       "date": "2021/08/08",
       "scenario": "魔法少女×サラリーマン",
       "system": "CoC6版",
@@ -2186,10 +2240,11 @@
         }
       ],
       "hashtag": "まほリーマン01",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 56,
+      "id": "stream_56",
       "date": "2021/09/03",
       "scenario": "スイムヒーローズ",
       "system": "エモクロア",
@@ -2227,10 +2282,11 @@
         }
       ],
       "hashtag": "スイムヒーローズ第三泳者",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 57,
+      "id": "stream_57",
       "date": "2021/09/17",
       "scenario": "カタシロ",
       "system": "CoC7版",
@@ -2252,10 +2308,11 @@
         }
       ],
       "hashtag": "チノシロ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 58,
+      "id": "stream_58",
       "date": "2021/09/23",
       "scenario": "私のエトワール",
       "system": "エモクロア",
@@ -2297,10 +2354,11 @@
         }
       ],
       "hashtag": "ぱぱたかどりるのエトワール",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 59,
+      "id": "stream_59",
       "date": "2021/09/30",
       "scenario": "デバッグログ",
       "system": "エモクロア",
@@ -2342,10 +2400,11 @@
         }
       ],
       "hashtag": "デバログ03",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 60,
+      "id": "stream_60",
       "date": "2021/10/03",
       "scenario": "マジックブルーの境界線",
       "system": "エモクロア",
@@ -2383,10 +2442,11 @@
         }
       ],
       "hashtag": "マジックブルーの境界線09",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 61,
+      "id": "stream_61",
       "date": "2021/10/08",
       "scenario": "WANNABE",
       "system": "エモクロア",
@@ -2408,10 +2468,11 @@
         }
       ],
       "hashtag": "バズアイドルは気分がいい",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 62,
+      "id": "stream_62",
       "date": "2021/10/21",
       "scenario": "冒涜都市Ｚ～深碧の魔境～",
       "system": "CoC7版",
@@ -2449,10 +2510,11 @@
         }
       ],
       "hashtag": "V4探検隊",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 63,
+      "id": "stream_63",
       "date": "2021/11/27",
       "scenario": "獣のディーヴァ",
       "system": "CoC6版",
@@ -2498,10 +2560,11 @@
         }
       ],
       "hashtag": "DEX強者といく獣のディーヴァ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 64,
+      "id": "stream_64",
       "date": "2021/12/14",
       "scenario": "大悪党 地獄ケ原斬人",
       "system": "エモクロア",
@@ -2523,10 +2586,11 @@
         }
       ],
       "hashtag": "大悪党コーサカ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 65,
+      "id": "stream_65",
       "date": "2021/12/20",
       "scenario": "1072",
       "system": "エモクロア",
@@ -2548,10 +2612,11 @@
         }
       ],
       "hashtag": "ドシャの1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 66,
+      "id": "stream_66",
       "date": "2022/01/15",
       "scenario": "1072",
       "system": "エモクロア",
@@ -2573,10 +2638,11 @@
         }
       ],
       "hashtag": "たかおの1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 67,
+      "id": "stream_67",
       "date": "2022/01/15",
       "scenario": "1072",
       "system": "エモクロア",
@@ -2598,10 +2664,11 @@
         }
       ],
       "hashtag": "どりるの1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 68,
+      "id": "stream_68",
       "date": "2022/01/16",
       "scenario": "1072",
       "system": "エモクロア",
@@ -2623,10 +2690,11 @@
         }
       ],
       "hashtag": "あまぎの1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 69,
+      "id": "stream_69",
       "date": "2022/01/16",
       "scenario": "彼は誰時はなお暗く、",
       "system": "CoC6版",
@@ -2664,10 +2732,11 @@
         }
       ],
       "hashtag": "よつか彼誰",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 70,
+      "id": "stream_70",
       "date": "2022/01/19",
       "scenario": "1072",
       "system": "エモクロア",
@@ -2689,10 +2758,11 @@
         }
       ],
       "hashtag": "Ciの1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 71,
+      "id": "stream_71",
       "date": "2022/01/29",
       "scenario": "1072",
       "system": "エモクロア",
@@ -2714,10 +2784,11 @@
         }
       ],
       "hashtag": "Fraの1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 72,
+      "id": "stream_72",
       "date": "2022/01/30",
       "scenario": "1072",
       "system": "エモクロア",
@@ -2739,10 +2810,11 @@
         }
       ],
       "hashtag": "きりとの1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 73,
+      "id": "stream_73",
       "date": "2022/01/31",
       "scenario": "ヲチミナ様",
       "system": "エモクロア",
@@ -2780,10 +2852,11 @@
         }
       ],
       "hashtag": "トッパツ様",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 74,
+      "id": "stream_74",
       "date": "2022/02/07",
       "scenario": "私のエトワール",
       "system": "エモクロア",
@@ -2821,10 +2894,11 @@
         }
       ],
       "hashtag": "激突エトワール",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 75,
+      "id": "stream_75",
       "date": "2022/02/09",
       "scenario": "カタシロ",
       "system": "",
@@ -2846,10 +2920,11 @@
         }
       ],
       "hashtag": "カタシロリビルド",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 76,
+      "id": "stream_76",
       "date": "2022/02/12",
       "scenario": "カリプソの島",
       "system": "CoC6版",
@@ -2871,10 +2946,11 @@
         }
       ],
       "hashtag": "コーサカリプソ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 77,
+      "id": "stream_77",
       "date": "2022/02/16",
       "scenario": "オトギバラシ",
       "system": "エモクロア",
@@ -2916,10 +2992,11 @@
         }
       ],
       "hashtag": "エボシバラシ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 78,
+      "id": "stream_78",
       "date": "2022/02/17",
       "scenario": "1072",
       "system": "エモクロア",
@@ -2941,10 +3018,11 @@
         }
       ],
       "hashtag": "サンゴの1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 79,
+      "id": "stream_79",
       "date": "2022/02/18",
       "scenario": "マジックブルーの境界線",
       "system": "エモクロア",
@@ -2982,10 +3060,11 @@
         }
       ],
       "hashtag": "きてどちっくブルー",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 80,
+      "id": "stream_80",
       "date": "2022/02/20",
       "scenario": "或る探偵の回想録",
       "system": "CoC6版",
@@ -3015,10 +3094,11 @@
         }
       ],
       "hashtag": "コーあく回想録",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 81,
+      "id": "stream_81",
       "date": "2022/02/20",
       "scenario": "茶瀬木高校オカルト部",
       "system": "CoC6版",
@@ -3064,10 +3144,11 @@
         }
       ],
       "hashtag": "ちゃぜ高オカ部03",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 82,
+      "id": "stream_82",
       "date": "2022/02/23",
       "scenario": "マジックブルーの境界線",
       "system": "エモクロア",
@@ -3105,10 +3186,11 @@
         }
       ],
       "hashtag": "源子ノ境界線",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 83,
+      "id": "stream_83",
       "date": "2022/02/26",
       "scenario": "終末紀行RPG -World's End Journey-",
       "system": "終末紀行RPG",
@@ -3138,10 +3220,11 @@
         }
       ],
       "hashtag": "アルファとハルカは韻が固い",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 84,
+      "id": "stream_84",
       "date": "2022/02/27",
       "scenario": "カエラズノケン ～狂気山脈第三次登山隊の顛末～",
       "system": "CoC7版",
@@ -3183,10 +3266,11 @@
         }
       ],
       "hashtag": "V4ノケン",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 85,
+      "id": "stream_85",
       "date": "2022/03/02",
       "scenario": "或る探偵の追想録",
       "system": "CoC6版",
@@ -3216,10 +3300,11 @@
         }
       ],
       "hashtag": "コーあく追想録",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 86,
+      "id": "stream_86",
       "date": "2022/03/05",
       "scenario": "事象地平のアストロナウト",
       "system": "CoC6版",
@@ -3257,10 +3342,11 @@
         }
       ],
       "hashtag": "コーホム大魔王のアストロナウト",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 87,
+      "id": "stream_87",
       "date": "2022/03/13",
       "scenario": "ロールシャッハシンドローム",
       "system": "エモクロア",
@@ -3282,10 +3368,11 @@
         }
       ],
       "hashtag": "コーズムシャッハ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 88,
+      "id": "stream_88",
       "date": "2022/03/19",
       "scenario": "マジックブルーの境界線",
       "system": "エモクロア",
@@ -3323,10 +3410,11 @@
         }
       ],
       "hashtag": "くくひらんぱの境界線",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 89,
+      "id": "stream_89",
       "date": "2022/04/09",
       "scenario": "のっく、のっく、ちゃいむ",
       "system": "CoC6版",
@@ -3364,10 +3452,11 @@
         }
       ],
       "hashtag": "のっくちゃ06",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 90,
+      "id": "stream_90",
       "date": "2022/04/19",
       "scenario": "夢の対価",
       "system": "CoC6版",
@@ -3405,10 +3494,11 @@
         }
       ],
       "hashtag": "サカタクボシ夢の対価",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 91,
+      "id": "stream_91",
       "date": "2022/04/29",
       "scenario": "あなた方は御曹司です、金にモノを言わせてイタリアまでオペラを聴きに来ました。",
       "system": "CoC6版",
@@ -3446,10 +3536,11 @@
         }
       ],
       "hashtag": "ブギコーオペラ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 92,
+      "id": "stream_92",
       "date": "2022/04/30",
       "scenario": "異説・狂人日記",
       "system": "CoC6版",
@@ -3471,10 +3562,11 @@
         }
       ],
       "hashtag": "異説吸血記",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 93,
+      "id": "stream_93",
       "date": "2022/05/10",
       "scenario": "ようこそ！迷冥市役所都市伝説課へ！",
       "system": "CoC6版",
@@ -3508,10 +3600,11 @@
         }
       ],
       "hashtag": "コーホム都市伝説課",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 94,
+      "id": "stream_94",
       "date": "2022/05/14",
       "scenario": "カノヨ街",
       "system": "CoC6版",
@@ -3561,10 +3654,11 @@
         }
       ],
       "hashtag": "街に待ったカノヨ街",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 95,
+      "id": "stream_95",
       "date": "2022/05/21",
       "scenario": "ハートフルワンダーランド",
       "system": "CoC6版",
@@ -3602,10 +3696,11 @@
         }
       ],
       "hashtag": "ハトワン04",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 96,
+      "id": "stream_96",
       "date": "2022/06/10",
       "scenario": "大怪獣サメラ",
       "system": "エモクロア",
@@ -3643,10 +3738,11 @@
         }
       ],
       "hashtag": "大怪獣カルナ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 97,
+      "id": "stream_97",
       "date": "2022/06/16",
       "scenario": "星へ至る棺",
       "system": "CoC6版",
@@ -3668,10 +3764,11 @@
         }
       ],
       "hashtag": "星へ至る吸血鬼",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 98,
+      "id": "stream_98",
       "date": "2022/06/24",
       "scenario": "ロクメ様の村",
       "system": "エモクロア",
@@ -3721,10 +3818,11 @@
         }
       ],
       "hashtag": "ユエドシャコーホムの村",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 99,
+      "id": "stream_99",
       "date": "2022/07/06",
       "scenario": "隣人の隣人を愛せよ",
       "system": "エモクロア",
@@ -3754,10 +3852,11 @@
         }
       ],
       "hashtag": "コーホムを愛せよ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 100,
+      "id": "stream_100",
       "date": "2022/07/07",
       "scenario": "実験体δは青に微笑む",
       "system": "CoC6版",
@@ -3779,10 +3878,11 @@
         }
       ],
       "hashtag": "コーサカは青に微笑む",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 101,
+      "id": "stream_101",
       "date": "2022/07/08",
       "scenario": "ゆらめく魔法市",
       "system": "CoC6版",
@@ -3804,10 +3904,11 @@
         }
       ],
       "hashtag": "西の魔法市",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 102,
+      "id": "stream_102",
       "date": "2022/07/09",
       "scenario": "私のエトワール",
       "system": "エモクロア",
@@ -3845,10 +3946,11 @@
         }
       ],
       "hashtag": "ンゴ灰那のエトワール",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 103,
+      "id": "stream_103",
       "date": "2022/07/09",
       "scenario": "突発TRPG",
       "system": "",
@@ -3870,10 +3972,11 @@
         }
       ],
       "hashtag": "",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 104,
+      "id": "stream_104",
       "date": "2022/07/14",
       "scenario": "アダマンタイトの眠る夜",
       "system": "CoC6版",
@@ -3907,10 +4010,11 @@
         }
       ],
       "hashtag": "高高アダヨル",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 105,
+      "id": "stream_105",
       "date": "2022/07/16",
       "scenario": "夕星シンフォニア",
       "system": "エモクロア",
@@ -3940,10 +4044,11 @@
         }
       ],
       "hashtag": "天ホムシンフォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 106,
+      "id": "stream_106",
       "date": "2022/07/17",
       "scenario": "私のエトワール",
       "system": "エモクロア",
@@ -3981,10 +4086,11 @@
         }
       ],
       "hashtag": "この朝エトワール",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 107,
+      "id": "stream_107",
       "date": "2022/07/21",
       "scenario": "遙か彼方まで",
       "system": "エモクロア",
@@ -4034,10 +4140,11 @@
         }
       ],
       "hashtag": "はるかな_02",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 108,
+      "id": "stream_108",
       "date": "2022/08/04",
       "scenario": "美術館ホラーRTA",
       "system": "CoC6版",
@@ -4083,10 +4190,11 @@
         }
       ],
       "hashtag": "やんごずむ美術館RTA",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 109,
+      "id": "stream_109",
       "date": "2022/08/11",
       "scenario": "夕星シンフォニア",
       "system": "エモクロア",
@@ -4116,10 +4224,11 @@
         }
       ],
       "hashtag": "どりあんシンフォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 110,
+      "id": "stream_110",
       "date": "2022/08/20",
       "scenario": "マジックブルーの境界線",
       "system": "エモクロア",
@@ -4157,10 +4266,11 @@
         }
       ],
       "hashtag": "テラよつかげの境界線",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 111,
+      "id": "stream_111",
       "date": "2022/08/21",
       "scenario": "ジャンクパーツ・フルセッション！",
       "system": "CoC6版",
@@ -4222,10 +4332,11 @@
         }
       ],
       "hashtag": "コーホムユエドシャセッション",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 112,
+      "id": "stream_112",
       "date": "2022/08/22",
       "scenario": "茶瀬木高校（仮）入部",
       "system": "CoC6版",
@@ -4254,10 +4365,11 @@
         }
       ],
       "hashtag": "",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 113,
+      "id": "stream_113",
       "date": "2022/08/22",
       "scenario": "砂城の王",
       "system": "CoC6版",
@@ -4279,10 +4391,11 @@
         }
       ],
       "hashtag": "砂城の吸血鬼",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 114,
+      "id": "stream_114",
       "date": "2022/08/27",
       "scenario": "1072",
       "system": "エモクロア",
@@ -4304,10 +4417,11 @@
         }
       ],
       "hashtag": "あっくんの1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 115,
+      "id": "stream_115",
       "date": "2022/08/28",
       "scenario": "1072",
       "system": "エモクロア",
@@ -4329,10 +4443,11 @@
         }
       ],
       "hashtag": "なないの1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 116,
+      "id": "stream_116",
       "date": "2022/08/31",
       "scenario": "ふうたといっしょ。",
       "system": "エモクロア",
@@ -4370,10 +4485,11 @@
         }
       ],
       "hashtag": "でんこといっしょ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 117,
+      "id": "stream_117",
       "date": "2022/09/09",
       "scenario": "大正グロテスキズム",
       "system": "CoC6版",
@@ -4403,10 +4519,11 @@
         }
       ],
       "hashtag": "探偵吸血鬼ズム",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 118,
+      "id": "stream_118",
       "date": "2022/09/14",
       "scenario": "サヨナラエデン",
       "system": "エモクロア",
@@ -4428,10 +4545,11 @@
         }
       ],
       "hashtag": "コーサカエデン",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 119,
+      "id": "stream_119",
       "date": "2022/09/19",
       "scenario": "私のエトワール",
       "system": "エモクロア",
@@ -4469,10 +4587,11 @@
         }
       ],
       "hashtag": "ヒノクリセブンのエトワール",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 120,
+      "id": "stream_120",
       "date": "2022/09/21",
       "scenario": "東亰臨死クラブ",
       "system": "CoC6版",
@@ -4502,10 +4621,11 @@
         }
       ],
       "hashtag": "コーホム臨死クラブ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 121,
+      "id": "stream_121",
       "date": "2022/09/23",
       "scenario": "私のエトワール",
       "system": "エモクロア",
@@ -4543,10 +4663,11 @@
         }
       ],
       "hashtag": "テラよつかげのエトワール",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 122,
+      "id": "stream_122",
       "date": "2022/09/26",
       "scenario": "11人と何かいる!",
       "system": "CoC7版",
@@ -4600,10 +4721,11 @@
         }
       ],
       "hashtag": "むちゃくちゃ宇宙旅行",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 123,
+      "id": "stream_123",
       "date": "2022/10/07",
       "scenario": "1072",
       "system": "エモクロア",
@@ -4625,10 +4747,11 @@
         }
       ],
       "hashtag": "なくるの1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 124,
+      "id": "stream_124",
       "date": "2022/10/08",
       "scenario": "夕星シンフォニア",
       "system": "エモクロア",
@@ -4658,10 +4781,11 @@
         }
       ],
       "hashtag": "すこなくシンフォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 125,
+      "id": "stream_125",
       "date": "2022/10/09",
       "scenario": "夕星シンフォニア",
       "system": "エモクロア",
@@ -4695,10 +4819,11 @@
         }
       ],
       "hashtag": "たかみやシンフォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 126,
+      "id": "stream_126",
       "date": "2022/10/11",
       "scenario": "新約・八尺さま",
       "system": "エモクロア",
@@ -4736,10 +4861,11 @@
         }
       ],
       "hashtag": "カルナ組と新約八尺さま",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 127,
+      "id": "stream_127",
       "date": "2022/10/12",
       "scenario": "CUBIQ",
       "system": "エモクロア",
@@ -4769,10 +4895,11 @@
         }
       ],
       "hashtag": "コーホムCUBIQ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 128,
+      "id": "stream_128",
       "date": "2022/10/22",
       "scenario": "Good morning ALL",
       "system": "CoC6版",
@@ -4802,10 +4929,11 @@
         }
       ],
       "hashtag": "コーホムグドモ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 129,
+      "id": "stream_129",
       "date": "2022/10/26",
       "scenario": "歌舞伎町の嬢王",
       "system": "エモクロア",
@@ -4851,10 +4979,11 @@
         }
       ],
       "hashtag": "歌舞伎町のユエドシャコーホム",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 130,
+      "id": "stream_130",
       "date": "2022/11/01",
       "scenario": "塔葬の国",
       "system": "CoC6版",
@@ -4904,10 +5033,11 @@
         }
       ],
       "hashtag": "コー七たんの国",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 131,
+      "id": "stream_131",
       "date": "2022/11/03",
       "scenario": "蛹にはならない",
       "system": "エモクロア",
@@ -4937,10 +5067,11 @@
         }
       ],
       "hashtag": "コーなくの家出",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 132,
+      "id": "stream_132",
       "date": "2022/11/06",
       "scenario": "追鯨",
       "system": "CoC6版",
@@ -4986,10 +5117,11 @@
         }
       ],
       "hashtag": "ついでに追鯨",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 133,
+      "id": "stream_133",
       "date": "2022/11/17",
       "scenario": "ワンルーム・ディスコン",
       "system": "CoC6版",
@@ -5039,10 +5171,11 @@
         }
       ],
       "hashtag": "ワンディス女子会",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 134,
+      "id": "stream_134",
       "date": "2022/11/21",
       "scenario": "Hello new world.",
       "system": "エモクロア",
@@ -5064,10 +5197,11 @@
         }
       ],
       "hashtag": "七篠はろにゅ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 135,
+      "id": "stream_135",
       "date": "2022/12/06",
       "scenario": "静なるテロリスタ",
       "system": "CoC6版",
@@ -5137,10 +5271,11 @@
         }
       ],
       "hashtag": "きっとうるさいコーホムかなくる",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 136,
+      "id": "stream_136",
       "date": "2022/12/18",
       "scenario": "Hello new world.",
       "system": "エモクロア",
@@ -5162,10 +5297,11 @@
         }
       ],
       "hashtag": "ジャックのはろにゅ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 137,
+      "id": "stream_137",
       "date": "2022/12/21",
       "scenario": "新約・ムラサキカガミ",
       "system": "エモクロア",
@@ -5195,10 +5331,11 @@
         }
       ],
       "hashtag": "新約MZMカガミ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 138,
+      "id": "stream_138",
       "date": "2022/12/22",
       "scenario": "新世界より",
       "system": "CoC7版",
@@ -5252,10 +5389,11 @@
         }
       ],
       "hashtag": "海賊船煩悩号",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 139,
+      "id": "stream_139",
       "date": "2023/02/07",
       "scenario": "Hello new world.",
       "system": "エモクロア",
@@ -5277,10 +5415,11 @@
         }
       ],
       "hashtag": "むつーのはろにゅ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 140,
+      "id": "stream_140",
       "date": "2023/02/08",
       "scenario": "Hello new world.",
       "system": "エモクロア",
@@ -5302,10 +5441,11 @@
         }
       ],
       "hashtag": "ぱぱびのはろにゅ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 141,
+      "id": "stream_141",
       "date": "2023/02/19",
       "scenario": "砂上のβとXへの回帰",
       "system": "CoC6版",
@@ -5355,10 +5495,11 @@
         }
       ],
       "hashtag": "コーホムかなくるとXへの回帰",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 142,
+      "id": "stream_142",
       "date": "2023/02/22",
       "scenario": "本翅の彩度",
       "system": "CoC6版",
@@ -5380,10 +5521,11 @@
         }
       ],
       "hashtag": "",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 143,
+      "id": "stream_143",
       "date": "2023/02/24",
       "scenario": "片鱗",
       "system": "CoC6版",
@@ -5413,10 +5555,11 @@
         }
       ],
       "hashtag": "コーどり片鱗",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 144,
+      "id": "stream_144",
       "date": "2023/03/11",
       "scenario": "Hello new world.",
       "system": "エモクロア",
@@ -5438,10 +5581,11 @@
         }
       ],
       "hashtag": "どりるのはろにゅ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 145,
+      "id": "stream_145",
       "date": "2023/03/13",
       "scenario": "カタシロ",
       "system": "CoC7版",
@@ -5463,10 +5607,11 @@
         }
       ],
       "hashtag": "エフシロ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 146,
+      "id": "stream_146",
       "date": "2023/03/15",
       "scenario": "Hello new world.",
       "system": "エモクロア",
@@ -5488,10 +5633,11 @@
         }
       ],
       "hashtag": "きりとのはろにゅ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 147,
+      "id": "stream_147",
       "date": "2023/03/17",
       "scenario": "1072",
       "system": "エモクロア",
@@ -5513,10 +5659,11 @@
         }
       ],
       "hashtag": "かげぴの1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 148,
+      "id": "stream_148",
       "date": "2023/03/19",
       "scenario": "Hello new world.",
       "system": "エモクロア",
@@ -5538,10 +5685,11 @@
         }
       ],
       "hashtag": "健屋のはろにゅ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 149,
+      "id": "stream_149",
       "date": "2023/03/20",
       "scenario": "1072",
       "system": "エモクロア",
@@ -5563,10 +5711,11 @@
         }
       ],
       "hashtag": "刻夜の1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 150,
+      "id": "stream_150",
       "date": "2023/03/21",
       "scenario": "夕星シンフォニア",
       "system": "エモクロア",
@@ -5596,10 +5745,11 @@
         }
       ],
       "hashtag": "夢咲く星のシンフォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 151,
+      "id": "stream_151",
       "date": "2023/03/28",
       "scenario": "1072",
       "system": "エモクロア",
@@ -5621,10 +5771,11 @@
         }
       ],
       "hashtag": "テラゾー1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 152,
+      "id": "stream_152",
       "date": "2023/04/02",
       "scenario": "夕星シンフォニア",
       "system": "エモクロア",
@@ -5654,10 +5805,11 @@
         }
       ],
       "hashtag": "てらかげシンフォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 153,
+      "id": "stream_153",
       "date": "2023/04/08",
       "scenario": "私のエトワール",
       "system": "エモクロア",
@@ -5699,10 +5851,11 @@
         }
       ],
       "hashtag": "TRPG強者のエトワール",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 154,
+      "id": "stream_154",
       "date": "2023/04/21",
       "scenario": "ネバーランド・クラブ",
       "system": "CoC6版",
@@ -5740,10 +5893,11 @@
         }
       ],
       "hashtag": "かなくるコークラブ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 155,
+      "id": "stream_155",
       "date": "2023/04/22",
       "scenario": "マジックブルーの境界線",
       "system": "エモクロア",
@@ -5781,10 +5935,11 @@
         }
       ],
       "hashtag": "ドラベル葵の境界線",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 156,
+      "id": "stream_156",
       "date": "2023/04/27",
       "scenario": "鰯と柊",
       "system": "CoC6版",
@@ -5818,10 +5973,11 @@
         }
       ],
       "hashtag": "コーむついわひら",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 157,
+      "id": "stream_157",
       "date": "2023/05/24",
       "scenario": "オリカミ",
       "system": "エモクロア",
@@ -5859,10 +6015,11 @@
         }
       ],
       "hashtag": "留年組とオリカミ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 158,
+      "id": "stream_158",
       "date": "2023/05/28",
       "scenario": "Dの信仰",
       "system": "CoC6版",
@@ -5900,10 +6057,11 @@
         }
       ],
       "hashtag": "留年組の信仰",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 159,
+      "id": "stream_159",
       "date": "2023/06/03",
       "scenario": "LAST-0",
       "system": "CoC6版",
@@ -5961,10 +6119,11 @@
         }
       ],
       "hashtag": "すとぬるにコーホムかなくる",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 160,
+      "id": "stream_160",
       "date": "2023/06/18",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -6010,10 +6169,11 @@
         }
       ],
       "hashtag": "きてどちヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 161,
+      "id": "stream_161",
       "date": "2023/06/24",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -6059,10 +6219,11 @@
         }
       ],
       "hashtag": "煩悩ヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 162,
+      "id": "stream_162",
       "date": "2023/06/25",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -6108,10 +6269,11 @@
         }
       ],
       "hashtag": "超火力ヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 163,
+      "id": "stream_163",
       "date": "2023/07/01",
       "scenario": "救世主",
       "system": "CoC6版",
@@ -6153,10 +6315,11 @@
         }
       ],
       "hashtag": "サカなくりる救世主",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 164,
+      "id": "stream_164",
       "date": "2023/07/05",
       "scenario": "闇夜児童奇譚",
       "system": "CoC6版",
@@ -6186,10 +6349,11 @@
         }
       ],
       "hashtag": "コーホム児童奇譚",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 165,
+      "id": "stream_165",
       "date": "2023/07/30",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -6235,10 +6399,11 @@
         }
       ],
       "hashtag": "なかよしヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 166,
+      "id": "stream_166",
       "date": "2023/08/09",
       "scenario": "ハッピーエンドデスゲーム",
       "system": "エモクロア",
@@ -6260,10 +6425,11 @@
         }
       ],
       "hashtag": "ハッピーエンドデスコーサカ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 167,
+      "id": "stream_167",
       "date": "2023/08/26",
       "scenario": "COIN",
       "system": "エモクロア",
@@ -6293,10 +6459,11 @@
         }
       ],
       "hashtag": "コーホムCOIN",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 168,
+      "id": "stream_168",
       "date": "2023/09/02",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -6342,10 +6509,11 @@
         }
       ],
       "hashtag": "すしぜむヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 169,
+      "id": "stream_169",
       "date": "2023/09/03",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -6395,10 +6563,11 @@
         }
       ],
       "hashtag": "鮭獣聖火ヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 170,
+      "id": "stream_170",
       "date": "2023/10/08",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -6448,10 +6617,11 @@
         }
       ],
       "hashtag": "さしみるヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 171,
+      "id": "stream_171",
       "date": "2023/10/19",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -6501,10 +6671,11 @@
         }
       ],
       "hashtag": "たかすぎすりんぼヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 172,
+      "id": "stream_172",
       "date": "2023/10/28",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -6550,10 +6721,11 @@
         }
       ],
       "hashtag": "馬天道場ヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 173,
+      "id": "stream_173",
       "date": "2023/10/30",
       "scenario": "Hello new world.",
       "system": "エモクロア",
@@ -6575,10 +6747,11 @@
         }
       ],
       "hashtag": "あやめのはろにゅ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 174,
+      "id": "stream_174",
       "date": "2023/11/04",
       "scenario": "レゾンデートル",
       "system": "CoC6版",
@@ -6620,10 +6793,11 @@
         }
       ],
       "hashtag": "こーかなの存在証明",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 175,
+      "id": "stream_175",
       "date": "2023/11/09",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -6673,10 +6847,11 @@
         }
       ],
       "hashtag": "とびだせヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 176,
+      "id": "stream_176",
       "date": "2023/11/11",
       "scenario": "空の青さの掴み方",
       "system": "CoC6版",
@@ -6710,10 +6885,11 @@
         }
       ],
       "hashtag": "こーすこの掴み方",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 177,
+      "id": "stream_177",
       "date": "2023/11/12",
       "scenario": "恋する機械人形",
       "system": "Kutulu",
@@ -6743,10 +6919,11 @@
         }
       ],
       "hashtag": "おきくら23",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 178,
+      "id": "stream_178",
       "date": "2023/11/15",
       "scenario": "SHOTGUN KIXXING MARRIAGE",
       "system": "CoC6版",
@@ -6776,10 +6953,11 @@
         }
       ],
       "hashtag": "コーホムショキマリ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 179,
+      "id": "stream_179",
       "date": "2023/11/16",
       "scenario": "殺人舘殺人事件",
       "system": "CoC6版",
@@ -6809,10 +6987,11 @@
         }
       ],
       "hashtag": "コーすこ殺人事件",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 180,
+      "id": "stream_180",
       "date": "2023/11/22",
       "scenario": "マジックブルーの境界線",
       "system": "エモクロア",
@@ -6842,10 +7021,11 @@
         }
       ],
       "hashtag": "七たい境界線",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 181,
+      "id": "stream_181",
       "date": "2023/11/23",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -6891,10 +7071,11 @@
         }
       ],
       "hashtag": "かなくるどりびっぷのヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 182,
+      "id": "stream_182",
       "date": "2023/11/24",
       "scenario": "あトの祀リ-緋の宴-",
       "system": "CoC6版",
@@ -6956,10 +7137,11 @@
         }
       ],
       "hashtag": "コーかなじゃっくるあとまつ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 183,
+      "id": "stream_183",
       "date": "2023/11/26",
       "scenario": "私のエトワール",
       "system": "エモクロア",
@@ -6997,10 +7179,11 @@
         }
       ],
       "hashtag": "七たいたんのエトワール",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 184,
+      "id": "stream_184",
       "date": "2023/12/02",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -7046,10 +7229,11 @@
         }
       ],
       "hashtag": "あしこし痛め隊のヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 185,
+      "id": "stream_185",
       "date": "2023/12/07",
       "scenario": "海も枯れるまで",
       "system": "CoC6版",
@@ -7083,10 +7267,11 @@
         }
       ],
       "hashtag": "コーなく海枯れ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 186,
+      "id": "stream_186",
       "date": "2023/12/16",
       "scenario": "私のエトワール",
       "system": "エモクロア",
@@ -7124,10 +7309,11 @@
         }
       ],
       "hashtag": "突発エトワール",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 187,
+      "id": "stream_187",
       "date": "2023/12/20",
       "scenario": "MONSTER'S Future Bass",
       "system": "CoC6版",
@@ -7157,10 +7343,11 @@
         }
       ],
       "hashtag": "コームツモンベ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 188,
+      "id": "stream_188",
       "date": "2023/12/23",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -7206,10 +7393,11 @@
         }
       ],
       "hashtag": "掛川ヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 189,
+      "id": "stream_189",
       "date": "2023/12/27",
       "scenario": "1072",
       "system": "エモクロア",
@@ -7231,10 +7419,11 @@
         }
       ],
       "hashtag": "たいの1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 190,
+      "id": "stream_190",
       "date": "2024/01/06",
       "scenario": "お墓詣り",
       "system": "エモクロア",
@@ -7256,10 +7445,11 @@
         }
       ],
       "hashtag": "コーサカのお墓詣り",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 191,
+      "id": "stream_191",
       "date": "2024/01/07",
       "scenario": "羽化する可惜夜",
       "system": "エモクロア",
@@ -7305,10 +7495,11 @@
         }
       ],
       "hashtag": "羽化するコーホムかなくる",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 192,
+      "id": "stream_192",
       "date": "2024/01/09",
       "scenario": "AMIGO MI-GO",
       "system": "CoC6版",
@@ -7342,10 +7533,11 @@
         }
       ],
       "hashtag": "コーどりアミーゴ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 193,
+      "id": "stream_193",
       "date": "2024/01/20",
       "scenario": "夕星シンフォニア",
       "system": "エモクロア",
@@ -7375,10 +7567,11 @@
         }
       ],
       "hashtag": "逆行シンフォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 194,
+      "id": "stream_194",
       "date": "2024/01/25",
       "scenario": "Hello new world.",
       "system": "エモクロア",
@@ -7400,10 +7593,11 @@
         }
       ],
       "hashtag": "如月はろにゅ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 195,
+      "id": "stream_195",
       "date": "2024/02/15",
       "scenario": "1072",
       "system": "エモクロア",
@@ -7425,10 +7619,11 @@
         }
       ],
       "hashtag": "切り身の1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 196,
+      "id": "stream_196",
       "date": "2024/02/17",
       "scenario": "花冷えに亡く季節",
       "system": "CoC6版",
@@ -7462,10 +7657,11 @@
         }
       ],
       "hashtag": "コーユエに亡く季節",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 197,
+      "id": "stream_197",
       "date": "2024/02/19",
       "scenario": "降り注ぐ光の選択",
       "system": "CoC7版",
@@ -7503,10 +7699,11 @@
         }
       ],
       "hashtag": "降り注ぐ留年組",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 198,
+      "id": "stream_198",
       "date": "2024/02/20",
       "scenario": "1072",
       "system": "エモクロア",
@@ -7528,10 +7725,11 @@
         }
       ],
       "hashtag": "ひよりん1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 199,
+      "id": "stream_199",
       "date": "2024/02/22",
       "scenario": "夕星シンフォニア",
       "system": "エモクロア",
@@ -7565,10 +7763,11 @@
         }
       ],
       "hashtag": "さけひよシンフォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 200,
+      "id": "stream_200",
       "date": "2024/02/25",
       "scenario": "純潔と鉄血",
       "system": "CoC6版",
@@ -7602,10 +7801,11 @@
         }
       ],
       "hashtag": "コーむつ純鉄",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 201,
+      "id": "stream_201",
       "date": "2024/03/02",
       "scenario": "夕星シンフォニア",
       "system": "エモクロア",
@@ -7635,10 +7835,11 @@
         }
       ],
       "hashtag": "すずきりシンフォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 202,
+      "id": "stream_202",
       "date": "2024/03/06",
       "scenario": "私のエトワール",
       "system": "エモクロア",
@@ -7676,10 +7877,11 @@
         }
       ],
       "hashtag": "クセ強エトワール",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 203,
+      "id": "stream_203",
       "date": "2024/03/07",
       "scenario": "砂糖菓子でも傾げる天秤",
       "system": "エモクロア",
@@ -7717,10 +7919,11 @@
         }
       ],
       "hashtag": "傾げる夢咲天ホム",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 204,
+      "id": "stream_204",
       "date": "2024/03/10",
       "scenario": "悪霊の家",
       "system": "CoC6版",
@@ -7742,10 +7945,11 @@
         }
       ],
       "hashtag": "おきくら25",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 205,
+      "id": "stream_205",
       "date": "2024/03/17",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -7795,10 +7999,11 @@
         }
       ],
       "hashtag": "ドシャまどめめンゴヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 206,
+      "id": "stream_206",
       "date": "2024/03/23",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -7844,10 +8049,11 @@
         }
       ],
       "hashtag": "NEO生花のヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 207,
+      "id": "stream_207",
       "date": "2024/03/28",
       "scenario": "Hello new world.",
       "system": "エモクロア",
@@ -7869,10 +8075,11 @@
         }
       ],
       "hashtag": "ねおんのはろにゅ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 208,
+      "id": "stream_208",
       "date": "2024/03/29",
       "scenario": "Hello new world.",
       "system": "エモクロア",
@@ -7894,10 +8101,11 @@
         }
       ],
       "hashtag": "なくちゃはろにゅ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 209,
+      "id": "stream_209",
       "date": "2024/03/30",
       "scenario": "Hello new world.",
       "system": "エモクロア",
@@ -7919,10 +8127,11 @@
         }
       ],
       "hashtag": "ユエノのはろにゅ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 210,
+      "id": "stream_210",
       "date": "2024/04/24",
       "scenario": "リンの村の伝説",
       "system": "慈悲なきアイオニア",
@@ -7956,10 +8165,11 @@
         }
       ],
       "hashtag": "",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 211,
+      "id": "stream_211",
       "date": "2024/04/26",
       "scenario": "タナトスは死に何を想う",
       "system": "CoC6版",
@@ -7989,10 +8199,11 @@
         }
       ],
       "hashtag": "藍サカタナ死",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 212,
+      "id": "stream_212",
       "date": "2024/06/23",
       "scenario": "つきない夜に。",
       "system": "CoC6版",
@@ -8026,10 +8237,11 @@
         }
       ],
       "hashtag": "コーんぴつきよに",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 213,
+      "id": "stream_213",
       "date": "2024/07/10",
       "scenario": "暗夜に一灯",
       "system": "CoC6版",
@@ -8059,10 +8271,11 @@
         }
       ],
       "hashtag": "コーかなに一灯",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 214,
+      "id": "stream_214",
       "date": "2024/08/30",
       "scenario": "1072",
       "system": "エモクロア",
@@ -8084,10 +8297,11 @@
         }
       ],
       "hashtag": "イチの1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 215,
+      "id": "stream_215",
       "date": "2024/08/30",
       "scenario": "1072",
       "system": "エモクロア",
@@ -8109,10 +8323,11 @@
         }
       ],
       "hashtag": "三上の1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 216,
+      "id": "stream_216",
       "date": "2024/08/31",
       "scenario": "夕星シンフォニア",
       "system": "エモクロア",
@@ -8142,10 +8357,11 @@
         }
       ],
       "hashtag": "イチ上シンフォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 217,
+      "id": "stream_217",
       "date": "2024/09/22",
       "scenario": "1072",
       "system": "エモクロア",
@@ -8167,10 +8383,11 @@
         }
       ],
       "hashtag": "ユエノの1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 218,
+      "id": "stream_218",
       "date": "2024/10/12",
       "scenario": "灼熱さえあればいい",
       "system": "CoC6版",
@@ -8200,10 +8417,11 @@
         }
       ],
       "hashtag": "灼熱あもこーサカ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 219,
+      "id": "stream_219",
       "date": "2024/10/27",
       "scenario": "レプリカントの葬列",
       "system": "CoC6版",
@@ -8233,10 +8451,11 @@
         }
       ],
       "hashtag": "だぁさかの葬列",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 220,
+      "id": "stream_220",
       "date": "2024/11/12",
       "scenario": "仰天遊戯！",
       "system": "nRR",
@@ -8258,10 +8477,11 @@
         }
       ],
       "hashtag": "おきくら27",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 221,
+      "id": "stream_221",
       "date": "2024/11/17",
       "scenario": "夕星シンフォニア",
       "system": "エモクロア",
@@ -8291,10 +8511,11 @@
         }
       ],
       "hashtag": "しーしちシンフォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 222,
+      "id": "stream_222",
       "date": "2024/11/27",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -8344,10 +8565,11 @@
         }
       ],
       "hashtag": "おきくらヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 223,
+      "id": "stream_223",
       "date": "2024/11/30",
       "scenario": "私立天柱学園神話自衛委員会",
       "system": "CoC6版",
@@ -8397,10 +8619,11 @@
         }
       ],
       "hashtag": "コーホムかなくる学園",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 224,
+      "id": "stream_224",
       "date": "2024/12/08",
       "scenario": "ウルトラヒロイック2",
       "system": "エモクロア",
@@ -8446,10 +8669,11 @@
         }
       ],
       "hashtag": "超火力が消えゆく中で",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 225,
+      "id": "stream_225",
       "date": "2024/12/09",
       "scenario": "彼方からの幻燈",
       "system": "エモクロア",
@@ -8479,10 +8703,11 @@
         }
       ],
       "hashtag": "からのコーホム",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 226,
+      "id": "stream_226",
       "date": "2024/12/14",
       "scenario": "ウルトラヒロイック2",
       "system": "エモクロア",
@@ -8528,10 +8753,11 @@
         }
       ],
       "hashtag": "きてどちが消えゆく中で",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 227,
+      "id": "stream_227",
       "date": "2024/12/29",
       "scenario": "ウルトラヒロイック2",
       "system": "エモクロア",
@@ -8577,10 +8803,11 @@
         }
       ],
       "hashtag": "NEO生花が消えゆく中で",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 228,
+      "id": "stream_228",
       "date": "2025/01/08",
       "scenario": "辜月のN",
       "system": "CoC6版",
@@ -8614,10 +8841,11 @@
         }
       ],
       "hashtag": "コーなくこげぬ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 229,
+      "id": "stream_229",
       "date": "2025/01/11",
       "scenario": "ウルトラヒロイック2",
       "system": "エモクロア",
@@ -8663,10 +8891,11 @@
         }
       ],
       "hashtag": "掛川が消えゆく中で",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 230,
+      "id": "stream_230",
       "date": "2025/01/14",
       "scenario": "ウルトラヒロイック2",
       "system": "エモクロア",
@@ -8716,10 +8945,11 @@
         }
       ],
       "hashtag": "すしぜむが消えゆく中で",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 231,
+      "id": "stream_231",
       "date": "2025/01/16",
       "scenario": "フェイスレス・フェイスレス",
       "system": "Liminal",
@@ -8765,10 +8995,11 @@
         }
       ],
       "hashtag": "パンこなリミナル部",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 232,
+      "id": "stream_232",
       "date": "2025/01/25",
       "scenario": "高生紳士が好きそうな男選手権【初戦】",
       "system": "CoC6版",
@@ -8814,10 +9045,11 @@
         }
       ],
       "hashtag": "チーム新作シナリオまだですか",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 233,
+      "id": "stream_233",
       "date": "2025/01/29",
       "scenario": "ホワイトブラッククリスマス",
       "system": "CoC6版",
@@ -8855,10 +9087,11 @@
         }
       ],
       "hashtag": "コーかなくるホワブラ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 234,
+      "id": "stream_234",
       "date": "2025/01/30",
       "scenario": "高生紳士が好きそうな男選手権【決勝戦】",
       "system": "CoC6版",
@@ -8920,10 +9153,11 @@
         }
       ],
       "hashtag": "高生紳士が好きそうな男選手権",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 235,
+      "id": "stream_235",
       "date": "2025/02/05",
       "scenario": "ウルトラヒロイック2",
       "system": "エモクロア",
@@ -8973,10 +9207,11 @@
         }
       ],
       "hashtag": "かなくるどりびっぷが消えゆく中で",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 236,
+      "id": "stream_236",
       "date": "2025/02/11",
       "scenario": "マジックブルーの境界線",
       "system": "エモクロア",
@@ -9006,10 +9241,11 @@
         }
       ],
       "hashtag": "あもこま境界線",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 237,
+      "id": "stream_237",
       "date": "2025/02/13",
       "scenario": "嘘つきどもに祝福を",
       "system": "エモクロア",
@@ -9047,10 +9283,11 @@
         }
       ],
       "hashtag": "むつときコー嘘祝",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 238,
+      "id": "stream_238",
       "date": "2025/02/15",
       "scenario": "ウルトラヒロイック2",
       "system": "エモクロア",
@@ -9096,10 +9333,11 @@
         }
       ],
       "hashtag": "あしこし痛め隊が消えゆく中で",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 239,
+      "id": "stream_239",
       "date": "2025/02/20",
       "scenario": "つめつめわんわん！",
       "system": "CoC6版",
@@ -9129,10 +9367,11 @@
         }
       ],
       "hashtag": "コーなくわんわん",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 240,
+      "id": "stream_240",
       "date": "2025/02/23",
       "scenario": "界獣",
       "system": "エモクロア",
@@ -9162,10 +9401,11 @@
         }
       ],
       "hashtag": "だぁさか界獣",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 241,
+      "id": "stream_241",
       "date": "2025/02/24",
       "scenario": "月を虧く",
       "system": "CoC6版",
@@ -9195,10 +9435,11 @@
         }
       ],
       "hashtag": "コーなくつきかく",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 242,
+      "id": "stream_242",
       "date": "2025/03/14",
       "scenario": "フィンブルの手記",
       "system": "CoC6版",
@@ -9232,10 +9473,11 @@
         }
       ],
       "hashtag": "コーなくの手記",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 243,
+      "id": "stream_243",
       "date": "2025/03/29",
       "scenario": "私のエトワール",
       "system": "エモクロア",
@@ -9273,10 +9515,11 @@
         }
       ],
       "hashtag": "夢咲く星の甘いエトワール",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 244,
+      "id": "stream_244",
       "date": "2025/03/30",
       "scenario": "夕星シンフォニア",
       "system": "エモクロア",
@@ -9310,10 +9553,11 @@
         }
       ],
       "hashtag": "ドシャまどシンフォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 245,
+      "id": "stream_245",
       "date": "2025/04/04",
       "scenario": "胡桃炸裂症候群 -Drosselmeyer Syndrome-",
       "system": "CoC6版",
@@ -9355,10 +9599,11 @@
         }
       ],
       "hashtag": "コーきり症候群",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 246,
+      "id": "stream_246",
       "date": "2025/04/11",
       "scenario": "ウルトラヒロイック2",
       "system": "エモクロア",
@@ -9412,10 +9657,11 @@
         }
       ],
       "hashtag": "たかすぎすりんぼが消えゆく中で",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 247,
+      "id": "stream_247",
       "date": "2025/04/14",
       "scenario": "ウルトラヒロイック2",
       "system": "エモクロア",
@@ -9469,10 +9715,11 @@
         }
       ],
       "hashtag": "ドシャまどめめンゴが消えゆく中で",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 248,
+      "id": "stream_248",
       "date": "2025/04/19",
       "scenario": "夕星シンフォニア",
       "system": "エモクロア",
@@ -9502,10 +9749,11 @@
         }
       ],
       "hashtag": "あおるべシンフォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 249,
+      "id": "stream_249",
       "date": "2025/04/20",
       "scenario": "ウルトラヒロイック2",
       "system": "エモクロア",
@@ -9551,10 +9799,11 @@
         }
       ],
       "hashtag": "真第一陣が消えゆく中で",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 250,
+      "id": "stream_250",
       "date": "2025/05/01",
       "scenario": "穏やかに可塑していく惑星にて",
       "system": "CoC6版",
@@ -9584,10 +9833,11 @@
         }
       ],
       "hashtag": "コーかなPPP",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 251,
+      "id": "stream_251",
       "date": "2025/05/17",
       "scenario": "私のエトワール",
       "system": "エモクロア",
@@ -9625,10 +9875,11 @@
         }
       ],
       "hashtag": "そらこまるべエトワール",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 252,
+      "id": "stream_252",
       "date": "2025/05/29",
       "scenario": "たたら",
       "system": "CoC6版",
@@ -9658,10 +9909,11 @@
         }
       ],
       "hashtag": "弥栄家たたら",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 253,
+      "id": "stream_253",
       "date": "2025/05/31",
       "scenario": "夕星シンフォニア",
       "system": "エモクロア",
@@ -9691,10 +9943,11 @@
         }
       ],
       "hashtag": "あもこまシンフォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 254,
+      "id": "stream_254",
       "date": "2025/06/15",
       "scenario": "ウルトラヒロイック2",
       "system": "エモクロア",
@@ -9740,10 +9993,11 @@
         }
       ],
       "hashtag": "さしみるが消えゆく中で",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 255,
+      "id": "stream_255",
       "date": "2025/06/19",
       "scenario": "超怪獣クトゥルー",
       "system": "エモクロア",
@@ -9781,10 +10035,11 @@
         }
       ],
       "hashtag": "超怪獣マーボ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 256,
+      "id": "stream_256",
       "date": "2025/06/21",
       "scenario": "私のエトワール",
       "system": "エモクロア",
@@ -9822,10 +10077,11 @@
         }
       ],
       "hashtag": "宇宙なエトワール",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 257,
+      "id": "stream_257",
       "date": "2025/07/06",
       "scenario": "マーダースパイラル",
       "system": "エモクロア",
@@ -9855,10 +10111,11 @@
         }
       ],
       "hashtag": "牛どり螺旋",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 258,
+      "id": "stream_258",
       "date": "2025/07/16",
       "scenario": "アルカディック・ラブ",
       "system": "",
@@ -9888,10 +10145,11 @@
         }
       ],
       "hashtag": "急にTRPGやる部",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 259,
+      "id": "stream_259",
       "date": "2025/07/16",
       "scenario": "カオスを愛せよ！",
       "system": "CoC7版",
@@ -9925,10 +10183,11 @@
         }
       ],
       "hashtag": "こーねむカオ愛",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 260,
+      "id": "stream_260",
       "date": "2025/07/19",
       "scenario": "夕星シンフォニア",
       "system": "エモクロア",
@@ -9958,10 +10217,11 @@
         }
       ],
       "hashtag": "藍七シンフォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 261,
+      "id": "stream_261",
       "date": "2025/07/20",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -10007,10 +10267,11 @@
         }
       ],
       "hashtag": "半熟ヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 262,
+      "id": "stream_262",
       "date": "2025/07/26",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -10056,10 +10317,11 @@
         }
       ],
       "hashtag": "かねなしヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 263,
+      "id": "stream_263",
       "date": "2025/07/28",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -10109,10 +10371,11 @@
         }
       ],
       "hashtag": "あまなつヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 264,
+      "id": "stream_264",
       "date": "2025/08/03",
       "scenario": "マーダースパイラル",
       "system": "エモクロア",
@@ -10142,10 +10405,11 @@
         }
       ],
       "hashtag": "れいすば螺旋",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 265,
+      "id": "stream_265",
       "date": "2025/08/04",
       "scenario": "マーダースパイラル",
       "system": "エモクロア",
@@ -10179,10 +10443,11 @@
         }
       ],
       "hashtag": "シエんぴ螺旋",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 266,
+      "id": "stream_266",
       "date": "2025/08/11",
       "scenario": "翠嵐シンフォニア",
       "system": "エモクロア",
@@ -10212,10 +10477,11 @@
         }
       ],
       "hashtag": "文型村フォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 267,
+      "id": "stream_267",
       "date": "2025/08/12",
       "scenario": "コーネリアスの棺",
       "system": "エモクロア",
@@ -10269,10 +10535,11 @@
         }
       ],
       "hashtag": "こーかなみかんぴのコネひつ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 268,
+      "id": "stream_268",
       "date": "2025/08/13",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -10310,10 +10577,11 @@
         }
       ],
       "hashtag": "さんにんヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 269,
+      "id": "stream_269",
       "date": "2025/08/14",
       "scenario": "キブンゼ",
       "system": "",
@@ -10335,10 +10603,11 @@
         }
       ],
       "hashtag": "コーサカキブンゼ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 270,
+      "id": "stream_270",
       "date": "2025/08/15",
       "scenario": "マーダースパイラル",
       "system": "エモクロア",
@@ -10368,10 +10637,11 @@
         }
       ],
       "hashtag": "あおるべ螺旋",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 271,
+      "id": "stream_271",
       "date": "2025/08/16",
       "scenario": "夕星シンフォニア",
       "system": "エモクロア",
@@ -10401,10 +10671,11 @@
         }
       ],
       "hashtag": "コーサカシンフォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 272,
+      "id": "stream_272",
       "date": "2025/08/18",
       "scenario": "翠嵐シンフォニア",
       "system": "エモクロア",
@@ -10434,10 +10705,11 @@
         }
       ],
       "hashtag": "天ホム村フォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 273,
+      "id": "stream_273",
       "date": "2025/08/24",
       "scenario": "巳ツ女の神庭",
       "system": "CoC6版",
@@ -10471,10 +10743,11 @@
         }
       ],
       "hashtag": "コサからの神庭",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 274,
+      "id": "stream_274",
       "date": "2025/08/27",
       "scenario": "風と翔らう",
       "system": "CoC6版",
@@ -10508,10 +10781,11 @@
         }
       ],
       "hashtag": "さけコーかぜらう",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 275,
+      "id": "stream_275",
       "date": "2025/09/02",
       "scenario": "マーダースパイラル",
       "system": "エモクロア",
@@ -10541,10 +10815,11 @@
         }
       ],
       "hashtag": "イツきよ螺旋",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 276,
+      "id": "stream_276",
       "date": "2025/09/04",
       "scenario": "マーダースパイラル",
       "system": "エモクロア",
@@ -10574,10 +10849,11 @@
         }
       ],
       "hashtag": "ぱぱむつマダスパ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 277,
+      "id": "stream_277",
       "date": "2025/09/04",
       "scenario": "翠嵐シンフォニア",
       "system": "エモクロア",
@@ -10607,10 +10883,11 @@
         }
       ],
       "hashtag": "ぱぱむつ村フォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 278,
+      "id": "stream_278",
       "date": "2025/09/07",
       "scenario": "翠嵐シンフォニア",
       "system": "エモクロア",
@@ -10640,10 +10917,11 @@
         }
       ],
       "hashtag": "あおるべ村フォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 279,
+      "id": "stream_279",
       "date": "2025/09/10",
       "scenario": "私のエトワール",
       "system": "エモクロア",
@@ -10681,10 +10959,11 @@
         }
       ],
       "hashtag": "りゅあむるエトワール",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 280,
+      "id": "stream_280",
       "date": "2025/09/14",
       "scenario": "夕星シンフォニア",
       "system": "エモクロア",
@@ -10714,10 +10993,11 @@
         }
       ],
       "hashtag": "つぶそらシンフォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 281,
+      "id": "stream_281",
       "date": "2025/09/15",
       "scenario": "マーダースパイラル",
       "system": "エモクロア",
@@ -10747,10 +11027,11 @@
         }
       ],
       "hashtag": "あもこま螺旋",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 282,
+      "id": "stream_282",
       "date": "2025/09/17",
       "scenario": "ファタルコール",
       "system": "エモクロア",
@@ -10780,10 +11061,11 @@
         }
       ],
       "hashtag": "コーきりファタルコール",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 283,
+      "id": "stream_283",
       "date": "2025/09/19",
       "scenario": "マーダースパイラル",
       "system": "エモクロア",
@@ -10813,10 +11095,11 @@
         }
       ],
       "hashtag": "あおぱか螺旋",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 284,
+      "id": "stream_284",
       "date": "2025/09/21",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -10862,10 +11145,11 @@
         }
       ],
       "hashtag": "ゆんぽよヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 285,
+      "id": "stream_285",
       "date": "2025/09/26",
       "scenario": "透明となった君へ",
       "system": "CoC6版",
@@ -10887,10 +11171,11 @@
         }
       ],
       "hashtag": "透明となったコーサカ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 286,
+      "id": "stream_286",
       "date": "2025/09/29",
       "scenario": "翠嵐シンフォニア",
       "system": "エモクロア",
@@ -10920,10 +11205,11 @@
         }
       ],
       "hashtag": "あもこま村フォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 287,
+      "id": "stream_287",
       "date": "2025/09/30",
       "scenario": "1072",
       "system": "エモクロア",
@@ -10945,10 +11231,11 @@
         }
       ],
       "hashtag": "水田の1072",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 288,
+      "id": "stream_288",
       "date": "2025/10/01",
       "scenario": "Hello new world.",
       "system": "エモクロア",
@@ -10970,10 +11257,11 @@
         }
       ],
       "hashtag": "ゆめたろうのはろにゅ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 289,
+      "id": "stream_289",
       "date": "2025/10/19",
       "scenario": "夕星シンフォニア",
       "system": "エモクロア",
@@ -11003,10 +11291,11 @@
         }
       ],
       "hashtag": "まにざたシンフォニア",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 290,
+      "id": "stream_290",
       "date": "2025/10/22",
       "scenario": "マーダースパイラル",
       "system": "エモクロア",
@@ -11036,10 +11325,11 @@
         }
       ],
       "hashtag": "かなホム螺旋",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 291,
+      "id": "stream_291",
       "date": "2025/11/08",
       "scenario": "Starlight Stardom",
       "system": "CoC6版",
@@ -11069,10 +11359,11 @@
         }
       ],
       "hashtag": "こーぼしライダム",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 292,
+      "id": "stream_292",
       "date": "2025/11/17",
       "scenario": "ウルトラヒロイック2",
       "system": "エモクロア",
@@ -11122,10 +11413,11 @@
         }
       ],
       "hashtag": "あまなつが消えゆく中で",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 293,
+      "id": "stream_293",
       "date": "2025/11/28",
       "scenario": "ウィルマゼア急行の一番長い運行記録",
       "system": "CoC6版",
@@ -11167,10 +11459,11 @@
         }
       ],
       "hashtag": "コー七たん急行",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 294,
+      "id": "stream_294",
       "date": "2025/12/10",
       "scenario": "シュガードリィムでパ・ド・トロワ",
       "system": "エモクロア",
@@ -11208,10 +11501,11 @@
         }
       ],
       "hashtag": "あもコー所長のシュガロワ",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 295,
+      "id": "stream_295",
       "date": "2025/12/20",
       "scenario": "ウルトラヒロイック",
       "system": "エモクロア",
@@ -11257,10 +11551,11 @@
         }
       ],
       "hashtag": "サチとろ三保のヒロイック",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 296,
+      "id": "stream_296",
       "date": "2025/12/23",
       "scenario": "ガシャン！",
       "system": "CoC7版",
@@ -11298,10 +11593,11 @@
         }
       ],
       "hashtag": "",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 297,
+      "id": "stream_297",
       "date": "2025/12/24",
       "scenario": "マーダースパイラル",
       "system": "エモクロア",
@@ -11331,10 +11627,11 @@
         }
       ],
       "hashtag": "犬ロゼ螺旋",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     },
     {
-      "id": 298,
+      "id": "stream_298",
       "date": "2025/12/27",
       "scenario": "ウルトラヒロイック2",
       "system": "エモクロア",
@@ -11380,7 +11677,8 @@
         }
       ],
       "hashtag": "ゆんぽよが消えゆく中で",
-      "note": ""
+      "adminNote": "",
+      "relatedLinks": []
     }
   ]
 }
