@@ -29,8 +29,15 @@
                 <h1 class="text-xl sm:text-2xl font-black text-slate-900 tracking-wider">コーサカTRPGまとめ</h1>
                 <span class="text-[10px] bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full font-bold border border-pink-200 tracking-wide">非公式</span>
             </div>
-            <div class="text-xs text-slate-400 font-medium tracking-tight">
-                最終更新: <span x-text="updatedAt" class="text-pink-600 font-bold"></span>
+            
+            <div class="text-xs text-slate-400 font-medium tracking-tight flex flex-wrap items-center gap-x-4 gap-y-1 sm:justify-end">
+                <div>
+                    該当セッション: <span x-text="filteredStreams().length" class="text-pink-600 font-black text-sm"></span> <span class="text-[11px] font-bold text-slate-400">件</span>
+                </div>
+                <div class="hidden sm:block text-pink-200">|</div>
+                <div>
+                    最終更新: <span x-text="updatedAt" class="text-pink-600 font-bold"></span>
+                </div>
             </div>
         </header>
 
