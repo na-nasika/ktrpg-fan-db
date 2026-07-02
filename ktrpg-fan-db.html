@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>推しTRPG配信データベース</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <div x-data="app()" x-init="initApp()" class="max-w-6xl mx-auto px-4 py-8">
+        
+        <header class="mb-8 text-center">
+            <h1 class="text-3xl font-bold text-indigo-900 mb-2">推しTRPG配信データベース</h1>
+            <p class="text-sm text-slate-500">最終更新: <span x-text="updatedAt"></span></p>
+        </header>
+
+        <div class="bg-white p-4 rounded-xl shadow-xs border border-slate-200 mb-6 grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div>
+                <label class="block text-xs font-bold text-slate-500 uppercase mb-1">キーワード検索</label>
+                <input type="text" x-model="searchQuery" placeholder="シナリオ、PL、PC名..." class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-slate-500 uppercase mb-1">システム</label>
+                <select x-model="selectedSystem" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="">すべて</option>
+                    <template x-for="sys in systems" :key="sys">
+                        <option :value="sys" x-text="sys"></option>
+                    </template>
+                </select>
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-slate-500 uppercase mb-1">ゲームマスター(GM)</label>
+                <select x-model="selectedGm" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="">すべて</option>
+                    <template x-for="gm in gms" :key="gm">
+                        <option :value="gm" x-text="gm"></option>
+                    </template>
+                </select>
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-slate-500 uppercase mb-1">視聴ステータス</label>
+                <select x-model="selectedStatus" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="all">すべて</option>
+                    <option value="watched">✅ 視聴済みのみ</option>
+                    <option value="unwatched">⬜ 未視聴のみ</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-xs border border-slate-200 overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-100 border-b border-slate-200 text-xs font-bold text-slate-600 uppercase tracking-wider">
+                            <th class="py-3 px-4 w-16 text-center">視聴</th>
+                            <th class="py-3 px-4 w-36">配信日時</th>
+                            <th class="py-3 px-4">シナリオ / システム</th>
+                            <th class="py-3 px-4">GM</th>
+                            <th class="py-3 px-4">PL (PC ※タップで詳細)</th>
+                            <th class="py-3 px-4 w-28 text-center">リンク</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-sm">
+                        <template x-for="stream in filteredStreams()" :key="stream.id">
+                            <tr class="hover:bg-slate-50 transition-colors" :class="isWatched(stream.id) ? 'bg-indigo-50/30' : ''">
+                                <td class="py-4 px-4 text-center">
+                                    <input type="checkbox" :checked="isWatched(stream.id)" @change="toggleWatched(stream.id)" class="w-5 h-5 rounded-md border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                                </td>
+                                <td class="py-4 px-4 text-slate-500" x-text="stream.date"></td>
+                                <td class="py-4 px-4">
+                                    <div class="font-bold text-slate-900" x-text="stream.scenario"></div>
+                                    <span class="inline-block bg-slate-200 text-slate-700 text-xs px-2 py-0.5 rounded-sm mt-1" x-text="stream.system"></span>
+                                </td>
+                                <td class="py-4 px-4 font-medium" x-text="stream.gm"></td>
+                                <td class="py-4 px-4">
+                                    <div class="flex flex-wrap gap-2">
+                                        <template x-for="char in stream.characters">
+                                            <span @click="openModal(char)" class="bg-indigo-100 text-indigo-700 hover:bg-indigo-200 text-xs font-medium px-2 py-1 rounded-md cursor-pointer border border-indigo-200 transition-colors">
+                                                <span x-text="char.plName ? char.plName + '（' + char.pcName + '）' : char.pcName"></span>
+                                            </span>
+                                        </template>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-4 text-center space-y-1">
+                                    <template x-if="stream.url">
+                                        <a :href="stream.url" target="_blank" class="inline-block w-full bg-red-600 hover:bg-red-700 text-white text-xs py-1 px-2 rounded-sm font-medium transition-colors">YouTube</a>
+                                    </template>
+                                    <template x-if="stream.hashtag">
+                                        <a :href="'https://x.com/search?q=' + encodeURIComponent(stream.hashtag)" target="_blank" class="inline-block w-full bg-slate-900 hover:bg-slate-800 text-white text-xs py-1 px-2 rounded-sm font-medium transition-colors" x-text="stream.hashtag"></a>
+                                    </template>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+            <template x-if="filteredStreams().length === 0">
+                <div class="p-8 text-center text-slate-400">データ読み込み中、または該当する配信データが見つかりません。</div>
+            </template>
+        </div>
+
+        <div x-show="modalOpen" x-transition class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50" @click.self="closeModal()" style="display: none;">
+            <div class="bg-white rounded-xl shadow-xl border border-slate-200 max-w-md w-full overflow-hidden transform transition-all">
+                <div class="bg-indigo-900 px-6 py-4 flex justify-between items-center text-white">
+                    <h3 class="font-bold text-lg" x-text="selectedPc.pcName"></h3>
+                    <button @click="closeModal()" class="text-white/80 hover:text-white text-xl font-bold">&times;</button>
+                </div>
+                <div class="p-6 space-y-4">
+                    <div>
+                        <span class="block text-xs font-bold text-slate-400 uppercase mb-0.5">プレイヤー (PL)</span>
+                        <div class="text-slate-800 font-medium" x-text="selectedPc.plName || '未登録'"></div>
+                    </div>
+                    <div>
+                        <span class="block text-xs font-bold text-slate-400 uppercase mb-0.5">キャラクター属性/プロフィール</span>
+                        <div class="text-slate-700 bg-slate-50 p-2 rounded-md whitespace-pre-wrap text-sm" x-text="selectedPc.profile || '未登録'"></div>
+                    </div>
+                    <div>
+                        <span class="block text-xs font-bold text-slate-400 uppercase mb-0.5">継続セッション数 / 履歴</span>
+                        <div class="text-slate-700 text-sm" x-text="selectedPc.history || '未登録'"></div>
+                    </div>
+                    <template x-if="selectedPc.charasheetUrl">
+                        <div>
+                            <span class="block text-xs font-bold text-slate-400 uppercase mb-0.5">キャラクターシート</span>
+                            <a :href="selectedPc.charasheetUrl" target="_blank" class="text-indigo-600 hover:underline text-sm inline-flex items-center gap-1">キャラシを見る ↗</a>
+                        </div>
+                    </template>
+                    <div>
+                        <span class="block text-xs font-bold text-slate-400 uppercase mb-0.5">備考</span>
+                        <div class="text-slate-600 text-sm whitespace-pre-wrap" x-text="selectedPc.note || '-'"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function app() {
+            return {
+                updatedAt: "同期待ち...",
+                streams: [],
+                searchQuery: "",
+                selectedSystem: "",
+                selectedGm: "",
+                selectedStatus: "all",
+                watchedIds: [],
+                modalOpen: false,
+                selectedPc: {},
+                systems: [],
+                gms: [],
+
+                // 初期化処理
+                async initApp() {
+                    // ローカルストレージから視聴済みIDを読み込み
+                    const saved = localStorage.getItem('trpg_watched_ids');
+                    if (saved) {
+                        this.watchedIds = JSON.parse(saved);
+                    }
+                    
+                    try {
+                        // 💡 ここをあなたのGitHubアカウント名とリポジトリ名に書き換えてください！
+                        const response = await fetch('https://na-nasika.github.io/ktrpg-fan-db/data.json');
+                        if (!response.ok) throw new Error('ネットワーク応答が正常ではありませんでした');
+                        const data = await response.json();
+                        
+                        this.streams = data.streams;
+                        this.updatedAt = data.updatedAt;
+                        
+                        // フィルターの選択肢を自動生成
+                        this.systems = [...new Set(this.streams.map(s => s.system))].filter(Boolean);
+                        this.gms = [...new Set(this.streams.map(s => s.gm))].filter(Boolean);
+                    } catch (error) {
+                        console.error("データの読み込みに失敗しました:", error);
+                        this.updatedAt = "データの同期を待っています...";
+                    }
+                },
+
+                filteredStreams() {
+                    return this.streams.filter(stream => {
+                        const query = this.searchQuery.toLowerCase();
+                        const matchQuery = !query || 
+                            stream.scenario.toLowerCase().includes(query) ||
+                            stream.gm.toLowerCase().includes(query) ||
+                            (stream.hashtag && stream.hashtag.toLowerCase().includes(query)) ||
+                            stream.characters.some(c => 
+                                c.pcName.toLowerCase().includes(query) || 
+                                (c.plName && c.plName.toLowerCase().includes(query))
+                            );
+
+                        const matchSystem = !this.selectedSystem || stream.system === this.selectedSystem;
+                        const matchGm = !this.selectedGm || stream.gm === this.selectedGm;
+                        
+                        let matchStatus = true;
+                        const watched = this.isWatched(stream.id);
+                        if (this.selectedStatus === 'watched') matchStatus = watched;
+                        if (this.selectedStatus === 'unwatched') matchStatus = !watched;
+
+                        return matchQuery && matchSystem && matchGm && matchStatus;
+                    });
+                },
+
+                isWatched(id) {
+                    return this.watchedIds.includes(id);
+                },
+
+                toggleWatched(id) {
+                    if (this.isWatched(id)) {
+                        this.watchedIds = this.watchedIds.filter(wId => wId !== id);
+                    } else {
+                        this.watchedIds.push(id);
+                    }
+                    localStorage.setItem('trpg_watched_ids', JSON.stringify(this.watchedIds));
+                },
+
+                openModal(charData) {
+                    this.selectedPc = charData;
+                    this.modalOpen = true;
+                },
+
+                closeModal() {
+                    this.modalOpen = false;
+                    this.selectedPc = {};
+                }
+            }
+        }
+    </script>
+</body>
+</html>
