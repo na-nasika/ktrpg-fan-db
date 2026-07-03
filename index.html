@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;800;900&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- 画面を綺麗な画像（PNG）に変換するための信頼性の高いライブラリ -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <style>
         body {
             font-family: 'M PLUS 1p', 'Noto Sans JP', sans-serif;
@@ -24,7 +26,7 @@
 
     <div x-data="app()" x-init="initApp()" class="max-w-6xl mx-auto px-4 py-6 sm:py-8" x-cloak>
         
-        <!-- ヘッダーエリア（🦇の余白を極限までタイトに調整） -->
+        <!-- ヘッダーエリア -->
         <header class="mb-5 sm:mb-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 pb-5 border-b border-pink-200">
             <div class="flex items-center gap-1">
                 <span class="text-2xl inline-block transform rotate-[-12deg] select-none text-pink-500 w-8 text-center">🦇</span>
@@ -32,7 +34,6 @@
                 <span class="text-[10px] bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full font-bold border border-pink-200 tracking-wide ml-2">非公式</span>
             </div>
             
-            <!-- 総数カウンター（最終更新を日付のみに修正） -->
             <div class="text-xs text-slate-400 font-medium tracking-tight flex flex-wrap items-center gap-x-4 gap-y-1 sm:justify-end">
                 <div>
                     該当セッション: <span x-text="filteredStreams().length" class="text-pink-600 font-black text-sm"></span> <span class="text-[11px] font-bold text-slate-400">件</span>
@@ -44,7 +45,7 @@
             </div>
         </header>
 
-        <!-- フィルターエリア（ご指定のシンプルなプレースホルダーに変更） -->
+        <!-- フィルターエリア -->
         <div class="bg-white p-3 sm:p-4 rounded-2xl border border-pink-100 mb-6 space-y-3 shadow-sm">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
                 <div>
@@ -75,138 +76,174 @@
                         <button @click="toggleStatus('watched')" :class="selectedStatus === 'watched' ? 'bg-pink-500 text-white font-bold shadow-sm' : 'text-slate-600 hover:bg-pink-100/50'" class="px-3 py-1 rounded-lg transition-all cursor-pointer">✅ 視聴済み</button>
                         <button @click="toggleStatus('unwatched')" :class="selectedStatus === 'unwatched' ? 'bg-pink-500 text-white font-bold shadow-sm' : 'text-slate-600 hover:bg-pink-100/50'" class="px-3 py-1 rounded-lg transition-all cursor-pointer">⬜ 未視聴</button>
                     </div>
+
+                    <!-- お気に入り絞り込みボタン（ノイズの少ない極小ドット付き） -->
+                    <button @click="toggleFavoriteFilter()" :class="showFavoritesOnly ? 'bg-pink-500 text-white font-bold border-pink-500 shadow-sm' : 'border-pink-200 text-slate-600 hover:bg-pink-50/50'" class="border px-3 py-1 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer">
+                        <span class="w-2 h-2 rounded-full transition-colors" :class="showFavoritesOnly ? 'bg-white' : 'bg-pink-400'"></span>
+                        <span>お気に入り</span>
+                    </button>
                 </div>
 
-                <button @click="toggleSortOrder()" class="ml-auto sm:ml-0 border border-pink-200 hover:bg-pink-50/50 text-slate-600 font-medium px-3 py-1 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer">
-                    <span x-text="sortOrder === 'desc' ? '📅 新しい順' : '📅 古い順'"></span>
-                </button>
+                <div class="flex items-center gap-2 ml-auto sm:ml-0">
+                    <!-- 画像保存ボタン（お気に入り絞り込み中のみ出現する、デザインを邪魔しない特別ボタン） -->
+                    <template x-if="showFavoritesOnly && filteredStreams().length > 0">
+                        <button @click="downloadAsImage()" class="bg-slate-800 hover:bg-slate-700 text-white font-medium px-3 py-1 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer">
+                            <span>📸 画像で保存</span>
+                        </button>
+                    </template>
+
+                    <button @click="toggleSortOrder()" class="border border-pink-200 hover:bg-pink-50/50 text-slate-600 font-medium px-3 py-1 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer">
+                        <span x-text="sortOrder === 'desc' ? '📅 新しい順' : '📅 古い順'"></span>
+                    </button>
+                </div>
             </div>
         </div>
 
-        <!-- スマホ用カードレイアウト -->
-        <div class="block md:hidden space-y-4">
-            <template x-for="stream in filteredStreams()" :key="'card-'+stream.id">
-                <div @click="openModal(stream)" class="bg-white rounded-2xl border border-pink-100 p-4 shadow-sm space-y-3 transition-colors cursor-pointer" :class="isWatched(stream.id) ? 'bg-pink-50/10' : ''">
-                    <div class="flex items-center justify-between border-b border-pink-50 pb-2" @click.stop>
-                        <span class="text-xs text-slate-400 font-medium" x-text="stream.date"></span>
-                        <label class="flex items-center gap-1.5 text-xs text-slate-500 cursor-pointer select-none">
-                            <input type="checkbox" :checked="isWatched(stream.id)" @change="toggleWatched(stream.id)" class="w-4 h-4 rounded border-pink-300 text-pink-500 focus:ring-pink-400 cursor-pointer accent-pink-500">
-                            <span class="text-[11px]" x-text="isWatched(stream.id) ? '視聴済み' : '未視聴'"></span>
-                        </label>
-                    </div>
-
-                    <div class="flex gap-3 items-start">
-                        <template x-if="getYoutubeId(stream.links)">
-                            <div class="w-28 shrink-0 aspect-video bg-pink-50 rounded-lg overflow-hidden border border-pink-100/60 shadow-sm">
-                                <img :src="'https://img.youtube.com/vi/' + getYoutubeId(stream.links) + '/mqdefault.jpg'" alt="Thumbnail" class="w-full h-full object-cover">
-                            </div>
-                        </template>
+        <!-- 📸 画像化のためのキャプチャ対象コンテナ -->
+        <div id="capture-area" class="bg-transparent rounded-2xl">
+            
+            <!-- スマホ用カードレイアウト -->
+            <div class="block md:hidden space-y-4">
+                <template x-for="stream in filteredStreams()" :key="'card-'+stream.id">
+                    <div @click="openModal(stream)" class="bg-white rounded-2xl border border-pink-100 p-4 shadow-sm space-y-3 transition-colors cursor-pointer relative" :class="isWatched(stream.id) ? 'bg-pink-50/10' : ''">
                         
-                        <template x-if="!getYoutubeId(stream.links)">
-                            <div class="w-28 shrink-0 aspect-video bg-pink-50/50 rounded-lg flex items-center justify-center border border-pink-100/40">
-                                <span class="text-[10px] text-pink-300 font-bold">NO IMAGE</span>
+                        <div class="flex items-center justify-between border-b border-pink-50 pb-2">
+                            <div class="flex items-center gap-2">
+                                <!-- お気に入り用：極小ドット（タップでピンクに点灯、邪魔しない位置に配置） -->
+                                <button @click.stop="toggleFavorite(stream.id)" class="p-1 -ml-1 focus:outline-none cursor-pointer" title="お気に入り">
+                                    <div class="w-2.5 h-2.5 rounded-full border transition-all duration-200" 
+                                         :class="isFavorite(stream.id) ? 'bg-pink-500 border-pink-500 scale-110 shadow-[0_0_6px_#ec4899]' : 'bg-slate-200 border-slate-300 hover:bg-pink-200'"></div>
+                                </button>
+                                <span class="text-xs text-slate-400 font-medium" x-text="stream.date"></span>
                             </div>
-                        </template>
+                            <label class="flex items-center gap-1.5 text-xs text-slate-500 cursor-pointer select-none" @click.stop>
+                                <input type="checkbox" :checked="isWatched(stream.id)" @change="toggleWatched(stream.id)" class="w-4 h-4 rounded border-pink-300 text-pink-500 focus:ring-pink-400 cursor-pointer accent-pink-500">
+                                <span class="text-[11px]" x-text="isWatched(stream.id) ? '視聴済み' : '未視聴'"></span>
+                            </label>
+                        </div>
 
-                        <div class="space-y-1 flex-1 min-w-0">
-                            <div class="font-bold text-slate-900 tracking-wide text-xs sm:text-sm leading-snug break-words" x-text="stream.scenario"></div>
-                            <span class="inline-block bg-slate-100 text-slate-500 text-[9px] sm:text-[10px] px-1.5 py-0.5 rounded-md font-medium" x-text="stream.system"></span>
+                        <div class="flex gap-3 items-start">
+                            <template x-if="getYoutubeId(stream.links)">
+                                <div class="w-28 shrink-0 aspect-video bg-pink-50 rounded-lg overflow-hidden border border-pink-100/60 shadow-sm">
+                                    <img :src="'https://img.youtube.com/vi/' + getYoutubeId(stream.links) + '/mqdefault.jpg'" alt="Thumbnail" class="w-full h-full object-cover">
+                                </div>
+                            </template>
+                            
+                            <template x-if="!getYoutubeId(stream.links)">
+                                <div class="w-28 shrink-0 aspect-video bg-pink-50/50 rounded-lg flex items-center justify-center border border-pink-100/40">
+                                    <span class="text-[10px] text-pink-300 font-bold">NO IMAGE</span>
+                                </div>
+                            </template>
+
+                            <div class="space-y-1 flex-1 min-w-0">
+                                <div class="font-bold text-slate-900 tracking-wide text-xs sm:text-sm leading-snug break-words" x-text="stream.scenario"></div>
+                                <span class="inline-block bg-slate-100 text-slate-500 text-[9px] sm:text-[10px] px-1.5 py-0.5 rounded-md font-medium" x-text="stream.system"></span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between gap-2 pt-1" @click.stop>
+                            <div class="text-[11px] text-slate-500 truncate max-w-[60%]">
+                                <span class="font-bold text-slate-400">GM:</span> <span x-text="stream.gm"></span>
+                            </div>
+                            
+                            <div class="flex flex-col gap-1 w-24 shrink-0 text-center">
+                                <template x-for="link in stream.links">
+                                    <a :href="link.url" target="_blank" class="inline-block w-full bg-pink-500 hover:bg-pink-600 text-white text-[10px] py-1 px-1.5 rounded-lg font-medium transition-colors shadow-sm" x-text="link.label"></a>
+                                </template>
+                                <template x-if="stream.hashtag">
+                                    <a :href="'https://x.com/search?q=' + encodeURIComponent(stream.hashtag)" target="_blank" class="inline-block w-full bg-slate-700 hover:bg-slate-600 text-white text-[9px] py-0.5 px-1.5 rounded-lg font-normal transition-colors overflow-hidden text-ellipsis whitespace-nowrap" x-text="stream.hashtag"></a>
+                                </template>
+                            </div>
+                        </div>
+
+                        <div class="bg-pink-50/20 rounded-xl p-2.5 text-[11px] border border-pink-50/50 flex flex-wrap gap-1">
+                            <span class="text-slate-400 font-bold mr-1 shrink-0">PL:</span>
+                            <div class="flex flex-wrap gap-1 flex-1">
+                                <template x-for="char in stream.characters">
+                                    <span class="bg-white text-pink-700 text-[10px] font-medium px-1.5 py-0.5 rounded-md border border-pink-100">
+                                        <span x-text="char.plName ? char.plName + '（' + char.pcName + '）' : char.pcName"></span>
+                                    </span>
+                                </template>
+                            </div>
                         </div>
                     </div>
+                </template>
+            </div>
 
-                    <div class="flex items-center justify-between gap-2 pt-1" @click.stop>
-                        <div class="text-[11px] text-slate-500 truncate max-w-[60%]">
-                            <span class="font-bold text-slate-400">GM:</span> <span x-text="stream.gm"></span>
-                        </div>
-                        
-                        <div class="flex flex-col gap-1 w-24 shrink-0 text-center">
-                            <template x-for="link in stream.links">
-                                <a :href="link.url" target="_blank" class="inline-block w-full bg-pink-500 hover:bg-pink-600 text-white text-[10px] py-1 px-1.5 rounded-lg font-medium transition-colors shadow-sm" x-text="link.label"></a>
-                            </template>
-                            <template x-if="stream.hashtag">
-                                <a :href="'https://x.com/search?q=' + encodeURIComponent(stream.hashtag)" target="_blank" class="inline-block w-full bg-slate-700 hover:bg-slate-600 text-white text-[9px] py-0.5 px-1.5 rounded-lg font-normal transition-colors overflow-hidden text-ellipsis whitespace-nowrap" x-text="stream.hashtag"></a>
-                            </template>
-                        </div>
-                    </div>
-
-                    <div class="bg-pink-50/20 rounded-xl p-2.5 text-[11px] border border-pink-50/50 flex flex-wrap gap-1">
-                        <span class="text-slate-400 font-bold mr-1 shrink-0">PL:</span>
-                        <div class="flex flex-wrap gap-1 flex-1">
-                            <template x-for="char in stream.characters">
-                                <span class="bg-white text-pink-700 text-[10px] font-medium px-1.5 py-0.5 rounded-md border border-pink-100">
-                                    <span x-text="char.plName ? char.plName + '（' + char.pcName + '）' : char.pcName"></span>
-                                </span>
-                            </template>
-                        </div>
-                    </div>
-                </div>
-            </template>
-        </div>
-
-        <!-- PC用テーブルレイアウト -->
-        <div class="hidden md:block bg-white rounded-2xl border border-pink-100 overflow-hidden shadow-sm">
-            <div class="overflow-x-auto">
-                <table class="w-full text-left border-collapse min-w-[950px]">
-                    <thead>
-                        <tr class="bg-pink-50/30 border-b border-pink-100 text-xs font-bold text-slate-500 tracking-wider">
-                            <th class="py-4 px-4 w-14 text-center">視聴</th>
-                            <th class="py-4 px-4 w-28">配信日</th>
-                            <th class="py-4 px-4 w-32">サムネイル</th>
-                            <th class="py-4 px-4">シナリオ / システム</th>
-                            <th class="py-4 px-4 w-36">GM</th>
-                            <th class="py-4 px-4">PL (PC)</th>
-                            <th class="py-4 px-4 w-36 text-center">リンク</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-pink-50 text-sm">
-                        <template x-for="stream in filteredStreams()" :key="'table-'+stream.id">
-                            <tr @click="openModal(stream)" class="hover:bg-pink-50/30 transition-colors cursor-pointer" :class="isWatched(stream.id) ? 'bg-pink-50/15' : ''">
-                                <td class="py-4 px-4 text-center" @click.stop>
-                                    <input type="checkbox" :checked="isWatched(stream.id)" @change="toggleWatched(stream.id)" class="w-4 h-4 rounded border-pink-300 text-pink-500 focus:ring-pink-400 cursor-pointer accent-pink-500">
-                                </td>
-                                <td class="py-4 px-4 text-slate-400 font-semibold" x-text="stream.date"></td>
-                                <td class="py-4 px-4">
-                                    <template x-if="getYoutubeId(stream.links)">
-                                        <div class="w-24 aspect-video bg-pink-50 rounded-lg overflow-hidden border border-pink-100/60 shadow-sm transform hover:scale-105 transition-transform duration-200">
-                                            <img :src="'https://img.youtube.com/vi/' + getYoutubeId(stream.links) + '/mqdefault.jpg'" alt="Thumbnail" class="w-full h-full object-cover">
-                                        </div>
-                                    </template>
-                                    <template x-if="!getYoutubeId(stream.links)">
-                                        <div class="w-24 aspect-video bg-pink-50/40 rounded-lg flex items-center justify-center border border-pink-100/30 text-[10px] text-pink-200 font-bold">
-                                            NO IMAGE
-                                        </div>
-                                    </template>
-                                </td>
-                                <td class="py-4 px-4">
-                                    <div class="font-bold text-slate-900 tracking-wide text-[15px] leading-snug" x-text="stream.scenario"></div>
-                                    <span class="inline-block bg-slate-100 text-slate-500 text-xs px-2 py-0.5 rounded-md mt-2 font-medium" x-text="stream.system"></span>
-                                </td>
-                                <td class="py-4 px-4 font-bold text-slate-700" x-text="stream.gm"></td>
-                                <td class="py-4 px-4">
-                                    <div class="flex flex-wrap gap-1.5">
-                                        <template x-for="char in stream.characters">
-                                            <span class="bg-pink-50/50 text-pink-700 text-xs font-medium px-2.5 py-1 rounded-xl border border-pink-100/40">
-                                                <span x-text="char.plName ? char.plName + '（' + char.pcName + '）' : char.pcName"></span>
-                                            </span>
-                                        </template>
-                                    </div>
-                                </td>
-                                <td class="py-4 px-4 text-center" @click.stop>
-                                    <div class="flex flex-col gap-1.5 max-w-[120px] mx-auto">
-                                        <template x-for="link in stream.links">
-                                            <a :href="link.url" target="_blank" class="inline-block w-full bg-pink-500 hover:bg-pink-600 text-white text-[11px] py-1 px-2 rounded-lg font-medium transition-colors shadow-sm tracking-wider" x-text="link.label"></a>
-                                        </template>
-                                        <template x-if="stream.hashtag">
-                                            <a :href="'https://x.com/search?q=' + encodeURIComponent(stream.hashtag)" target="_blank" class="inline-block w-full bg-slate-700 hover:bg-slate-600 text-white text-[10px] py-0.5 px-2 rounded-lg font-normal transition-colors overflow-hidden text-ellipsis whitespace-nowrap" x-text="stream.hashtag"></a>
-                                        </template>
-                                    </div>
-                                </td>
+            <!-- PC用テーブルレイアウト -->
+            <div class="hidden md:block bg-white rounded-2xl border border-pink-100 overflow-hidden shadow-sm">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse min-w-[950px]">
+                        <thead>
+                            <tr class="bg-pink-50/30 border-b border-pink-100 text-xs font-bold text-slate-500 tracking-wider">
+                                <th class="py-4 px-3 w-10 text-center">★</th>
+                                <th class="py-4 px-3 w-14 text-center">視聴</th>
+                                <th class="py-4 px-4 w-28">配信日</th>
+                                <th class="py-4 px-4 w-32">サムネイル</th>
+                                <th class="py-4 px-4">シナリオ / システム</th>
+                                <th class="py-4 px-4 w-36">GM</th>
+                                <th class="py-4 px-4">PL (PC)</th>
+                                <th class="py-4 px-4 w-36 text-center">リンク</th>
                             </tr>
-                        </template>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody class="divide-y divide-pink-50 text-sm">
+                            <template x-for="stream in filteredStreams()" :key="'table-'+stream.id">
+                                <tr @click="openModal(stream)" class="hover:bg-pink-50/30 transition-colors cursor-pointer" :class="isWatched(stream.id) ? 'bg-pink-50/15' : ''">
+                                    <td class="py-4 px-3 text-center" @click.stop>
+                                        <!-- お気に入り用極小ドット -->
+                                        <button @click="toggleFavorite(stream.id)" class="p-1 focus:outline-none cursor-pointer" title="お気に入り">
+                                            <div class="w-2.5 h-2.5 rounded-full border mx-auto transition-all duration-200" 
+                                                 :class="isFavorite(stream.id) ? 'bg-pink-500 border-pink-500 scale-110 shadow-[0_0_6px_#ec4899]' : 'bg-slate-200 border-slate-300 hover:bg-pink-200'"></div>
+                                        </button>
+                                    </td>
+                                    <td class="py-4 px-3 text-center" @click.stop>
+                                        <input type="checkbox" :checked="isWatched(stream.id)" @change="toggleWatched(stream.id)" class="w-4 h-4 rounded border-pink-300 text-pink-500 focus:ring-pink-400 cursor-pointer accent-pink-500">
+                                    </td>
+                                    <td class="py-4 px-4 text-slate-400 font-semibold" x-text="stream.date"></td>
+                                    <td class="py-4 px-4">
+                                        <template x-if="getYoutubeId(stream.links)">
+                                            <div class="w-24 aspect-video bg-pink-50 rounded-lg overflow-hidden border border-pink-100/60 shadow-sm transform hover:scale-105 transition-transform duration-200">
+                                                <img :src="'https://img.youtube.com/vi/' + getYoutubeId(stream.links) + '/mqdefault.jpg'" alt="Thumbnail" class="w-full h-full object-cover">
+                                            </div>
+                                        </template>
+                                        <template x-if="!getYoutubeId(stream.links)">
+                                            <div class="w-24 aspect-video bg-pink-50/40 rounded-lg flex items-center justify-center border border-pink-100/30 text-[10px] text-pink-200 font-bold">
+                                                NO IMAGE
+                                            </div>
+                                        </template>
+                                    </td>
+                                    <td class="py-4 px-4">
+                                        <div class="font-bold text-slate-900 tracking-wide text-[15px] leading-snug" x-text="stream.scenario"></div>
+                                        <span class="inline-block bg-slate-100 text-slate-500 text-xs px-2 py-0.5 rounded-md mt-2 font-medium" x-text="stream.system"></span>
+                                    </td>
+                                    <td class="py-4 px-4 font-bold text-slate-700" x-text="stream.gm"></td>
+                                    <td class="py-4 px-4">
+                                        <div class="flex flex-wrap gap-1.5">
+                                            <template x-for="char in stream.characters">
+                                                <span class="bg-pink-50/50 text-pink-700 text-xs font-medium px-2.5 py-1 rounded-xl border border-pink-100/40">
+                                                    <span x-text="char.plName ? char.plName + '（' + char.pcName + '）' : char.pcName"></span>
+                                                </span>
+                                            </template>
+                                        </div>
+                                    </td>
+                                    <td class="py-4 px-4 text-center" @click.stop>
+                                        <div class="flex flex-col gap-1.5 max-w-[120px] mx-auto">
+                                            <template x-for="link in stream.links">
+                                                <a :href="link.url" target="_blank" class="inline-block w-full bg-pink-500 hover:bg-pink-600 text-white text-[11px] py-1 px-2 rounded-lg font-medium transition-colors shadow-sm tracking-wider" x-text="link.label"></a>
+                                            </template>
+                                            <template x-if="stream.hashtag">
+                                                <a :href="'https://x.com/search?q=' + encodeURIComponent(stream.hashtag)" target="_blank" class="inline-block w-full bg-slate-700 hover:bg-slate-600 text-white text-[10px] py-0.5 px-2 rounded-lg font-normal transition-colors overflow-hidden text-ellipsis whitespace-nowrap" x-text="stream.hashtag"></a>
+                                            </template>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
+
+        </div> <!-- /#capture-area -->
 
         <!-- データ未検出プレースホルダー -->
         <template x-if="filteredStreams().length === 0 && updatedAt !== '同期中...'">
@@ -226,7 +263,7 @@
                 <!-- モーダルボディ -->
                 <div class="p-6 space-y-4 text-xs sm:text-sm flex-1 overflow-y-auto bg-white">
                     
-                    <!-- ① みんなへのメモ -->
+                    <!-- みんなへのメモ -->
                     <template x-if="activeStream.adminNote">
                         <div class="text-slate-700 bg-pink-50/30 p-3 rounded-xl border border-pink-100 leading-relaxed font-normal flex gap-1.5 items-start">
                             <span class="shrink-0 select-none">💡</span>
@@ -234,7 +271,7 @@
                         </div>
                     </template>
 
-                    <!-- ② 関連リンクボタン -->
+                    <!-- 関連リンクボタン -->
                     <template x-if="activeStream.relatedLinks && activeStream.relatedLinks.length > 0">
                         <div class="flex flex-col gap-1.5 pt-1">
                             <template x-for="rLink in activeStream.relatedLinks">
@@ -243,13 +280,13 @@
                         </div>
                     </template>
 
-                    <!-- ③ プレイヤー & キャラクター詳細 -->
-                    <div class="space-y-3">
+                    <!-- プレイヤー & キャラクター詳細（リンク自動パース付きの超高機能版） -->
+                    <div class="space-y-4">
                         <template x-for="char in activeStream.characters">
                             <template x-if="char.profile || char.history || char.note || char.charasheetUrl">
-                                <div class="bg-white rounded-xl p-3 border border-pink-100 space-y-2 shadow-2xs">
-                                    <div class="flex items-baseline justify-between flex-wrap gap-x-21">
-                                        <div class="font-bold text-slate-800">
+                                <div class="bg-white rounded-xl p-4 border border-pink-100 space-y-3 shadow-2xs">
+                                    <div class="flex items-baseline justify-between flex-wrap gap-x-2 border-b border-pink-50 pb-1.5">
+                                        <div class="font-bold text-slate-800 text-sm sm:text-base">
                                             👤 <span x-text="char.pcName"></span>
                                         </div>
                                         <div class="text-[11px] text-slate-500">
@@ -257,19 +294,50 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="text-[11px] sm:text-xs space-y-1 text-slate-600 bg-pink-50/10 p-2 rounded-lg border border-pink-50/30">
+                                    <div class="text-[11px] sm:text-xs space-y-3 text-slate-600">
+                                        <!-- プロフィール -->
                                         <template x-if="char.profile">
-                                            <div><span class="font-bold text-slate-400">プロフィール:</span> <span class="text-slate-700" x-text="char.profile"></span></div>
+                                            <div>
+                                                <div class="font-bold text-slate-400 text-[10px] uppercase tracking-wider mb-0.5">プロフィール</div>
+                                                <div class="text-slate-700 bg-slate-50/50 p-2 rounded-lg border border-slate-100/60" x-text="char.profile"></div>
+                                            </div>
                                         </template>
+
+                                        <!-- 継続シナリオ一覧（自動ボタン化システム） -->
                                         <template x-if="char.history">
-                                            <div><span class="font-bold text-slate-400">継続セッション数 / 履歴:</span> <span x-text="char.history"></span></div>
+                                            <div>
+                                                <div class="font-bold text-slate-400 text-[10px] uppercase tracking-wider mb-1">通過済みシナリオ</div>
+                                                <div class="grid grid-cols-1 gap-1.5">
+                                                    <template x-for="line in parseHistoryLinks(char.history)">
+                                                        <template x-if="line.url">
+                                                            <a :href="line.url" target="_blank" class="flex items-center justify-between w-full bg-pink-500/5 hover:bg-pink-500/10 text-pink-700 font-bold px-3 py-2 rounded-xl border border-pink-200/40 transition-colors text-left text-xs">
+                                                                <span x-text="'🔗 ' + line.title"></span>
+                                                                <span class="text-[10px] font-normal text-pink-400">↗</span>
+                                                            </a>
+                                                        </template>
+                                                        <template x-if="!line.url">
+                                                            <div class="text-slate-700 bg-slate-50/50 px-3 py-2 rounded-xl border border-slate-100/60 font-medium" x-text="line.title"></div>
+                                                        </template>
+                                                    </template>
+                                                </div>
+                                            </div>
                                         </template>
+
+                                        <!-- 備考 / メモ -->
                                         <template x-if="char.note">
-                                            <div><span class="font-bold text-slate-400">備考:</span> <span x-text="char.note"></span></div>
+                                            <div>
+                                                <div class="font-bold text-slate-400 text-[10px] uppercase tracking-wider mb-0.5">メモ</div>
+                                                <div class="text-slate-700 bg-slate-50/50 p-2 rounded-lg border border-slate-100/60 whitespace-pre-wrap" x-text="char.note"></div>
+                                            </div>
                                         </template>
+
+                                        <!-- キャラクターシートリンク -->
                                         <template x-if="char.charasheetUrl">
                                             <div class="pt-1">
-                                                <a :href="char.charasheetUrl" target="_blank" class="text-pink-500 font-bold hover:underline">キャラクターシートを見る ↗</a>
+                                                <a :href="char.charasheetUrl" target="_blank" class="inline-flex items-center gap-1 text-pink-500 font-bold hover:underline">
+                                                    <span>キャラクターシートを見る</span>
+                                                    <span class="text-[10px]">↗</span>
+                                                </a>
                                             </div>
                                         </template>
                                     </div>
@@ -296,17 +364,19 @@
                 endDate: "",
                 sortOrder: "desc",
                 watchedIds: [],
+                favoriteIds: [], // お気に入りID用の箱
+                showFavoritesOnly: false, // お気に入り絞り込みのスイッチ
                 modalOpen: false,
                 activeStream: {},
 
                 async initApp() {
-                    const saved = localStorage.getItem('trpg_watched_ids');
-                    if (saved) {
-                        this.watchedIds = JSON.parse(saved);
-                    }
+                    const savedWatched = localStorage.getItem('trpg_watched_ids');
+                    if (savedWatched) this.watchedIds = JSON.parse(savedWatched);
+
+                    const savedFavs = localStorage.getItem('trpg_fav_ids');
+                    if (savedFavs) this.favoriteIds = JSON.parse(savedFavs);
                     
                     try {
-                        // 👇 【超重要】ご自身の公開URLになっているか必ずご確認ください！
                         const response = await fetch('https://na-nasika.github.io/ktrpg-fan-db/data.json');
                         if (!response.ok) throw new Error('データが見つかりません');
                         const data = await response.json();
@@ -319,10 +389,30 @@
                     }
                 },
 
-                // 最終更新日時の文字列から時間部分をカットして「日付のみ」にする便利関数
                 formatDateOnly(dateTimeStr) {
                     if (!dateTimeStr || dateTimeStr === "同期中..." || dateTimeStr === "読み込みエラー") return dateTimeStr;
-                    return dateTimeStr.split(" ")[0]; // 「2026/02/08 14:30」を「2026/02/08」に分割して返す
+                    return dateTimeStr.split(" ")[0];
+                },
+
+                // PC履歴テキストを解析して「タイトル」と「URL」に分離する賢い関数
+                parseHistoryLinks(text) {
+                    if (!text) return [];
+                    return text.split('\n').map(line => {
+                        const cleanLine = line.replace(/^[・\-\*\s]+/, '').trim(); // 行頭の・やスペースを掃除
+                        if (!cleanLine) return null;
+
+                        // コロン「:」または「http」で区切る
+                        let title = cleanLine;
+                        let url = null;
+
+                        const httpIndex = cleanLine.indexOf('http');
+                        if (httpIndex !== -1) {
+                            title = cleanLine.substring(0, httpIndex).replace(/[:：\s]+$/, '').trim();
+                            url = cleanLine.substring(httpIndex).trim();
+                        }
+
+                        return { title: title || '配信リンク', url: url };
+                    }).filter(Boolean);
                 },
 
                 getYoutubeId(links) {
@@ -360,6 +450,10 @@
                     this.sortOrder = this.sortOrder === 'desc' ? 'asc' : 'desc';
                 },
 
+                toggleFavoriteFilter() {
+                    this.showFavoritesOnly = !this.showFavoritesOnly;
+                },
+
                 filteredStreams() {
                     let result = this.streams.filter(stream => {
                         const query = this.searchQuery.toLowerCase();
@@ -391,7 +485,10 @@
                         if (this.selectedStatus === 'watched') matchStatus = watched;
                         if (this.selectedStatus === 'unwatched') matchStatus = !watched;
 
-                        return matchQuery && matchKosaka && matchDate && matchStatus;
+                        let matchFav = true;
+                        if (this.showFavoritesOnly) matchFav = this.isFavorite(stream.id);
+
+                        return matchQuery && matchKosaka && matchDate && matchStatus && matchFav;
                     });
 
                     return result.sort((a, b) => {
@@ -412,6 +509,45 @@
                         this.watchedIds.push(id);
                     }
                     localStorage.setItem('trpg_watched_ids', JSON.stringify(this.watchedIds));
+                },
+
+                // お気に入り判定・追加・削除システム
+                isFavorite(id) {
+                    return this.favoriteIds.includes(id);
+                },
+
+                toggleFavorite(id) {
+                    if (this.isFavorite(id)) {
+                        this.favoriteIds = this.favoriteIds.filter(fId => fId !== id);
+                    } else {
+                        this.favoriteIds.push(id);
+                    }
+                    localStorage.setItem('trpg_fav_ids', JSON.stringify(this.favoriteIds));
+                },
+
+                // HTML要素を画像（PNG）として保存する関数
+                async downloadAsImage() {
+                    const target = document.getElementById('capture-area');
+                    if (!target) return;
+                    
+                    try {
+                        // スクロール状態に左右されず綺麗に写すための設定
+                        const canvas = await html2canvas(target, {
+                            useCORS: true, 
+                            backgroundColor: '#fff5f5', // 保存画像の背景を淡いピンクに
+                            scale: 2, // 画質を2倍にしてクッキリ美しく
+                            windowWidth: target.scrollWidth,
+                            windowHeight: target.scrollHeight
+                        });
+                        
+                        const link = document.createElement('a');
+                        link.download = `kosaka_trpg_favorites_${new Date().toISOString().slice(0,10)}.png`;
+                        link.href = canvas.toDataURL('image/png');
+                        link.click();
+                    } catch (error) {
+                        console.error("画像の生成に失敗しました:", error);
+                        alert("画像の保存中にエラーが発生しました。");
+                    }
                 },
 
                 openModal(streamData) {
