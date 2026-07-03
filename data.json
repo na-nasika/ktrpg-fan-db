@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026/07/02 23:13",
+  "updatedAt": "2026/07/03 20:53",
   "streams": [
     {
       "id": "stream_1",
@@ -123,7 +123,7 @@
         {
           "pcName": "右成葵",
           "plName": "コーサカ",
-          "history": "①LGO（https://www.youtube.com/live/ZBa1rLA3J3Y?feature=share）\n②カタシロ（https://www.youtube.com/live/7JGxrJCtF4Y?feature=share）",
+          "history": "LGO:https://www.youtube.com/live/ZBa1rLA3J3Y?feature=share\nカタシロ:https://www.youtube.com/live/7JGxrJCtF4Y?feature=share",
           "profile": "",
           "charasheetUrl": "",
           "note": ""
@@ -149,7 +149,7 @@
         {
           "pcName": "右成葵",
           "plName": "コーサカ",
-          "history": "①LGO（https://www.youtube.com/live/ZBa1rLA3J3Y?feature=share）\n②カタシロ（https://www.youtube.com/live/7JGxrJCtF4Y?feature=share）",
+          "history": "LGO:https://www.youtube.com/live/ZBa1rLA3J3Y?feature=share\nカタシロ:https://www.youtube.com/live/7JGxrJCtF4Y?feature=share",
           "profile": "",
           "charasheetUrl": "",
           "note": ""
@@ -7928,16 +7928,7 @@
       "scenario": "悪霊の家",
       "system": "CoC6版",
       "gm": "ディズム",
-      "characters": [
-        {
-          "pcName": "#REF!",
-          "plName": "",
-          "history": "",
-          "profile": "",
-          "charasheetUrl": "",
-          "note": ""
-        }
-      ],
+      "characters": [],
       "links": [
         {
           "label": "YouTube",
@@ -8460,16 +8451,7 @@
       "scenario": "仰天遊戯！",
       "system": "nRR",
       "gm": "ディズム",
-      "characters": [
-        {
-          "pcName": "#REF!",
-          "plName": "",
-          "history": "",
-          "profile": "",
-          "charasheetUrl": "",
-          "note": ""
-        }
-      ],
+      "characters": [],
       "links": [
         {
           "label": "YouTube",
@@ -11677,6 +11659,589 @@
         }
       ],
       "hashtag": "ゆんぽよが消えゆく中で",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_299",
+      "date": "2026/01/07",
+      "scenario": "52ヘルツのナハトムジーク",
+      "system": "CoC6版",
+      "gm": "ヒンシャのヒンシア",
+      "characters": [
+        {
+          "pcName": "雷桜祭",
+          "plName": "コーサカ",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/QGGFp13pPrU?si=RUuO7ZesWV8DlFri"
+        }
+      ],
+      "hashtag": "コーサカゴツトム",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_300",
+      "date": "2026/01/08",
+      "scenario": "スイサイダルアクト",
+      "system": "CoC6版",
+      "gm": "三上",
+      "characters": [],
+      "links": [
+        {
+          "label": "1",
+          "url": "https://www.youtube.com/live/yn_2rZ0NyfY?si=kGzSRee_wxusZluV"
+        },
+        {
+          "label": "2",
+          "url": "https://www.youtube.com/live/Bp4PnFKZdko?si=S5ushUkftGkVJpTs"
+        }
+      ],
+      "hashtag": "コーすこシエンゴスイアク",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_301",
+      "date": "2026/01/17",
+      "scenario": "ニトロとレモン",
+      "system": "CoC6版",
+      "gm": "つきのわむく",
+      "characters": [],
+      "links": [
+        {
+          "label": "前編",
+          "url": "https://www.youtube.com/live/fIxYdAmJz0M?si=KBIqV7Wb673kxOJC"
+        },
+        {
+          "label": "後編",
+          "url": "https://www.youtube.com/live/-bCqO173Ssc?si=cJ_7yhsrgY65EG-x"
+        }
+      ],
+      "hashtag": "コーんぴニトレモ",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_302",
+      "date": "2026/01/24",
+      "scenario": "翠嵐シンフォニア",
+      "system": "エモクロア",
+      "gm": "コーサカ",
+      "characters": [],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/o0cUnfDPl10?si=6e2NxfZHXGOEnHVT"
+        }
+      ],
+      "hashtag": "どりあん村フォニア",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_303",
+      "date": "2026/02/01",
+      "scenario": "神が手をする、足をする",
+      "system": "CoC6版",
+      "gm": "藍川蓮",
+      "characters": [
+        {
+          "pcName": "ミナミ",
+          "plName": "コーサカ",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/-uqxR4ztfKk?si=aEQMOxUj-vHyOs2E"
+        }
+      ],
+      "hashtag": "コーサカ手をする足をする",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_304",
+      "date": "2026/02/04",
+      "scenario": "マーダースパイラル",
+      "system": "エモクロア",
+      "gm": "コーサカ",
+      "characters": [],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/6BNtVySM8Vw?si=mksSuik18UOh7VMm"
+        }
+      ],
+      "hashtag": "ひげある螺旋",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_305",
+      "date": "2026/02/06",
+      "scenario": "nova –星に願いを、夏に終わりを。–",
+      "system": "エモクロア",
+      "gm": "想有ぱか",
+      "characters": [
+        {
+          "pcName": "星野千夏",
+          "plName": "コーサカ",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/Ncp5rJuz2dE?si=Uc_E7FkXfjirrCz8"
+        }
+      ],
+      "hashtag": "ほしなつコーサカ",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_306",
+      "date": "2026/02/07",
+      "scenario": "マーダースパイラル",
+      "system": "エモクロア",
+      "gm": "コーサカ",
+      "characters": [],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/4aV_7zbEwls?si=n1DfeqvHoEKVebq3"
+        }
+      ],
+      "hashtag": "長矢野螺旋",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_307",
+      "date": "2026/02/12",
+      "scenario": "この命が燃え尽き果てるまで",
+      "system": "",
+      "gm": "ひげさん",
+      "characters": [],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/ODbldcKfjNc?si=tdVuTdGtFTXVi8pf"
+        }
+      ],
+      "hashtag": "濃ゆいからしが果てるまで",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_308",
+      "date": "2026/02/12",
+      "scenario": "マーダースパイラル",
+      "system": "エモクロア",
+      "gm": "コーサカ",
+      "characters": [],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/VJwsZn5aopI?si=96Z09QII890GEXSi"
+        }
+      ],
+      "hashtag": "のわれん螺旋",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_309",
+      "date": "2026/02/17",
+      "scenario": "夕星シンフォニア",
+      "system": "エモクロア",
+      "gm": "コーサカ",
+      "characters": [],
+      "links": [
+        {
+          "label": "前編",
+          "url": "https://www.youtube.com/live/WMZD4ZsYZMM?si=2voIcbNSyq4FRbXr"
+        },
+        {
+          "label": "中編",
+          "url": "https://www.youtube.com/live/Bm-TmaV6fg4?si=b3ijF8KxztnL-9k4"
+        },
+        {
+          "label": "後編",
+          "url": "https://www.youtube.com/live/HZzu4u9oksg?si=FBiSbFgwi3-15-lf"
+        }
+      ],
+      "hashtag": "んぴまひシンフォニア",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_310",
+      "date": "2026/02/25",
+      "scenario": "そういえば昨日世界が終わりましたね",
+      "system": "CoC6版",
+      "gm": "三上",
+      "characters": [
+        {
+          "pcName": "雷桜祭",
+          "plName": "コーサカ",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/lQRvJXSsOXY?si=crVT_MGFdFI9gpan"
+        }
+      ],
+      "hashtag": "えばせかコーサカ",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_311",
+      "date": "2026/03/04",
+      "scenario": "Hello new world.",
+      "system": "エモクロア",
+      "gm": "コーサカ",
+      "characters": [
+        {
+          "pcName": "凪波汐",
+          "plName": "ヒンシャのヒンシア",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/d_Enl30i8qA?si=2gL9RUpwS0Kl65J-"
+        }
+      ],
+      "hashtag": "ヒンシアはろにゅ",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_312",
+      "date": "2026/03/21",
+      "scenario": "スプリガンの花嫁",
+      "system": "CoC6版",
+      "gm": "藤乃美空",
+      "characters": [
+        {
+          "pcName": "哭生豹真",
+          "plName": "藍月すりっぷ",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        },
+        {
+          "pcName": "祐川英輔",
+          "plName": "すぎうらきりと",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        },
+        {
+          "pcName": "キャサリン・ベイカー",
+          "plName": "コーサカ",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/OLX_sTLmE4U?si=uIboMikN_JFyF11m"
+        }
+      ],
+      "hashtag": "コーきりっぷスプ花",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_313",
+      "date": "2026/03/22",
+      "scenario": "ウルトラヒロイック2",
+      "system": "エモクロア",
+      "gm": "コーサカ",
+      "characters": [],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/_Hs8v9mzFXw?si=A55SvyUxOdOqdO8n"
+        }
+      ],
+      "hashtag": "サチとろ三保が消えゆく中で",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_314",
+      "date": "2026/04/04",
+      "scenario": "私のエトワール",
+      "system": "エモクロア",
+      "gm": "コーサカ",
+      "characters": [],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/_vHsiMdYhTY?si=vi5Gv2zTKawcerUf"
+        }
+      ],
+      "hashtag": "七夏町エトワール",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_315",
+      "date": "2026/05/08",
+      "scenario": "ハナノチルラム",
+      "system": "CoC6版",
+      "gm": "天井音らむね",
+      "characters": [
+        {
+          "pcName": "井ノ句部風林",
+          "plName": "コーサカ",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        },
+        {
+          "pcName": "珠ノ宮いちか",
+          "plName": "ざったん",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "前編",
+          "url": "https://www.youtube.com/live/f_ws7oSNg2Y?si=ONHR3L4MLt8oF8FM"
+        },
+        {
+          "label": "後編",
+          "url": "https://www.youtube.com/live/wzMaCyBhxFM?si=XPMO4JawnfNf3ps9"
+        }
+      ],
+      "hashtag": "コーたんノチルラム",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_316",
+      "date": "2026/05/28",
+      "scenario": "マーダースパイラル",
+      "system": "エモクロア",
+      "gm": "コーサカ",
+      "characters": [],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/cjexIjTuM2U?si=p1857u_kgd7BZxaN"
+        }
+      ],
+      "hashtag": "ねむみそ螺旋",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_317",
+      "date": "2026/05/29",
+      "scenario": "脳漿を揺蕩う。",
+      "system": "CoC6版",
+      "gm": "片隅ろぎん",
+      "characters": [
+        {
+          "pcName": "迷井五六",
+          "plName": "コーサカ",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/41F0qK4Lmdw?si=CJ-Li4HQy1eED7LT"
+        }
+      ],
+      "hashtag": "脳漿コーサカ",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_318",
+      "date": "2026/05/31",
+      "scenario": "ディヤマンの踊り子たち",
+      "system": "エモクロア",
+      "gm": "ごくつぶし",
+      "characters": [
+        {
+          "pcName": "リゼット・モンフォール",
+          "plName": "藍月なくる",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        },
+        {
+          "pcName": "マーガレット・オブリ",
+          "plName": "コーサカ",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/AaNefDLEtHw?si=aQJaVJ2XEnlikBxS"
+        }
+      ],
+      "hashtag": "ディヤマンの踊り子たち_第一幕",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_319",
+      "date": "2026/06/04",
+      "scenario": "Jewel",
+      "system": "エモクロア",
+      "gm": "辛咲こまど",
+      "characters": [],
+      "links": [
+        {
+          "label": "導入",
+          "url": "https://www.youtube.com/live/tmWUUj8yU-4?si=ji_azWWJzf0UnneB"
+        },
+        {
+          "label": "前編",
+          "url": "https://www.youtube.com/live/QLpfvlNFpCQ?si=irrYLHt7F7PKSuFj"
+        },
+        {
+          "label": "後編",
+          "url": "https://www.youtube.com/live/zA8D4bovvHw?si=a5J63RyHvlyF1YlY"
+        }
+      ],
+      "hashtag": "超あもコ田めめめ",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_320",
+      "date": "2026/06/06",
+      "scenario": "ウルトラヒロイック",
+      "system": "エモクロア",
+      "gm": "コーサカ",
+      "characters": [],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/0OmxeyWQZlM?si=v8GXIkHRI38jTKaC"
+        }
+      ],
+      "hashtag": "毎月胃痛よヒロイック",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_321",
+      "date": "2026/06/20",
+      "scenario": "マーダースパイラル",
+      "system": "エモクロア",
+      "gm": "コーサカ",
+      "characters": [],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/3875uiMp920?si=rVsk5_UszGEzRcnj"
+        }
+      ],
+      "hashtag": "ざたえも螺旋",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_322",
+      "date": "2026/06/27",
+      "scenario": "夕星シンフォニア",
+      "system": "エモクロア",
+      "gm": "コーサカ",
+      "characters": [],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/a3CzOugPdpA?si=ChXaYf7eGTIGZfjm"
+        }
+      ],
+      "hashtag": "ぱかあおシンフォニア",
+      "adminNote": "",
+      "relatedLinks": []
+    },
+    {
+      "id": "stream_323",
+      "date": "2026/07/03",
+      "scenario": "人魚の箱庭",
+      "system": "CoC6版",
+      "gm": "ユーガタ",
+      "characters": [
+        {
+          "pcName": "燻部肇",
+          "plName": "むつー",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        },
+        {
+          "pcName": "鵜篭カミラ",
+          "plName": "コーサカ",
+          "history": "",
+          "profile": "",
+          "charasheetUrl": "",
+          "note": ""
+        }
+      ],
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/live/1IIf0XV5Sc8?si=NklhcqyhQ7zD1722"
+        }
+      ],
+      "hashtag": "コーむつの箱庭",
       "adminNote": "",
       "relatedLinks": []
     }
