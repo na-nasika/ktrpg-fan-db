@@ -19,6 +19,14 @@
         ::-webkit-scrollbar-thumb { background: #f472b6; border-radius: 3px; }
         ::-webkit-scrollbar-thumb:hover { background: #ec4899; }
         [x-cloak] { display: none !important; }
+        
+        /* 📸 画像化ライブラリ（html2canvas）のための超頑丈なフォント・文字ズレ対策補正 */
+        .capture-strict-text {
+            font-family: 'Noto Sans JP', sans-serif !important;
+            letter-spacing: 0.05em !important;
+            line-height: 1.5 !important;
+            display: block !important;
+        }
     </style>
 </head>
 <body class="bg-pink-50/40 text-slate-800 antialiased selection:bg-pink-100 selection:text-pink-900">
@@ -162,7 +170,8 @@
                 <table class="w-full text-left border-collapse min-w-[950px]">
                     <thead>
                         <tr class="bg-pink-50/30 border-b border-pink-100 text-xs font-bold text-slate-500 tracking-wider">
-                            <th class="py-4 px-4 w-12 text-center"></th> <th class="py-4 px-3 w-14 text-center">視聴</th>
+                            <th class="py-4 px-4 w-12 text-center"></th>
+                            <th class="py-4 px-3 w-14 text-center">視聴</th>
                             <th class="py-4 px-4 w-28">配信日</th>
                             <th class="py-4 px-4 w-32">サムネイル</th>
                             <th class="py-4 px-4">シナリオ / システム</th>
@@ -231,41 +240,41 @@
             <div class="bg-white rounded-2xl border border-pink-100 p-12 text-center text-slate-400 font-medium shadow-sm">該当する配信データが見つかりません。</div>
         </template>
 
-        <div id="hidden-capture-studio" style="position: absolute; top: -9999px; left: -9999px; width: 800px;" class="bg-pink-50/60 p-8 rounded-3xl border border-pink-100 space-y-6">
-            <div class="flex items-center justify-between border-b border-pink-200 pb-4">
-                <div class="flex items-center gap-2">
-                    <span class="text-2xl">🦇</span>
-                    <h2 class="text-xl font-black text-slate-900 tracking-wider">MY FAVORITE SESSIONS</h2>
-                </div>
-                <div class="text-[10px] bg-white text-pink-600 font-bold border border-pink-100 px-3 py-1 rounded-full shadow-2xs">コーサカTRPGまとめ</div>
-            </div>
-            
+        <div id="hidden-capture-studio" style="position: absolute; top: -9999px; left: -9999px; width: 850px;" class="bg-pink-50/60 p-6 rounded-3xl border border-pink-100">
             <div class="grid grid-cols-2 gap-4">
                 <template x-for="stream in filteredStreams()" :key="'gallery-'+stream.id">
-                    <div class="bg-white rounded-2xl border border-pink-100/80 p-4 shadow-sm space-y-3">
-                        <div class="text-[11px] text-slate-400 font-bold" x-text="stream.date"></div>
-                        <div class="flex gap-3 items-start">
+                    <div class="bg-white rounded-2xl border border-pink-100/80 p-5 shadow-sm block relative">
+                        
+                        <div class="block mb-2 text-[11px] text-slate-400 font-bold capture-strict-text" x-text="stream.date"></div>
+                        
+                        <div class="block w-full clear-both overflow-hidden mb-3">
                             <template x-if="getYoutubeId(stream.links)">
-                                <div class="w-24 shrink-0 aspect-video bg-pink-50 rounded-lg overflow-hidden border border-pink-100/60">
+                                <div class="float-left w-24 aspect-video bg-pink-50 rounded-lg overflow-hidden border border-pink-100/60 mr-3">
                                     <img :src="'https://img.youtube.com/vi/' + getYoutubeId(stream.links) + '/mqdefault.jpg'" alt="Thumbnail" class="w-full h-full object-cover">
                                 </div>
                             </template>
-                            <div class="space-y-1 flex-1 min-w-0">
-                                <div class="font-bold text-slate-900 text-xs leading-snug break-words" x-text="stream.scenario"></div>
-                                <span class="inline-block bg-slate-100 text-slate-500 text-[9px] px-1.5 py-0.5 rounded-md font-medium" x-text="stream.system"></span>
+                            <div class="overflow-hidden">
+                                <div class="font-bold text-slate-900 text-xs tracking-wide capture-strict-text mb-1" style="font-size: 13px !important; line-height: 1.4 !important;" x-text="stream.scenario"></div>
+                                <div class="inline-block bg-slate-100 text-slate-500 text-[9px] px-1.5 py-0.5 rounded font-medium" x-text="stream.system"></div>
                             </div>
                         </div>
-                        <div class="text-[11px] text-slate-600 truncate">
-                            <span class="font-bold text-slate-400">GM:</span> <span x-text="stream.gm"></span>
+                        
+                        <div class="block w-full mb-3 pb-1 border-b border-pink-50/40 text-[11px] text-slate-700 capture-strict-text">
+                            <span class="font-bold text-slate-400">GM:</span> <span class="text-slate-800 font-bold" x-text="stream.gm"></span>
                         </div>
-                        <div class="bg-pink-50/20 rounded-xl p-2 text-[10px] border border-pink-50/40 flex flex-wrap gap-1">
-                            <span class="text-slate-400 font-bold mr-1">PL:</span>
-                            <div class="flex flex-wrap gap-1 flex-1">
+                        
+                        <div class="block w-full bg-pink-50/20 rounded-xl p-2.5 border border-pink-50/40">
+                            <div class="text-[10px] text-slate-400 font-bold mb-1 capture-strict-text">PLAYER & CHARACTER</div>
+                            <div class="block w-full overflow-hidden">
                                 <template x-for="char in stream.characters">
-                                    <span class="bg-white text-pink-700 font-medium px-1.5 py-0.5 rounded border border-pink-100" x-text="char.plName ? char.plName + '（' + char.pcName + '）' : char.pcName"></span>
+                                    <div class="float-left bg-white text-pink-700 font-medium text-[10px] px-2 py-0.5 rounded border border-pink-100 mr-1.5 mb-1.5 capture-strict-text">
+                                        <span x-text="char.plName ? char.plName + '（' + char.pcName + '）' : char.pcName"></span>
+                                    </div>
                                 </template>
                             </div>
+                            <div style="clear: both;"></div>
                         </div>
+                        
                     </div>
                 </template>
             </div>
@@ -533,20 +542,20 @@
                     localStorage.setItem('trpg_fav_ids', JSON.stringify(this.favoriteIds));
                 },
 
-                // 📸 進化したギャラリー並び対応・文字ズレ対策済みの画像書き出し関数
+                // 📸 バグを徹底修正した確実な画像保存システム
                 async downloadAsImage() {
                     const studio = document.getElementById('hidden-capture-studio');
                     if (!studio) return;
                     
                     try {
-                        // 文字化け・フォントズレを防ぎ、確実にレンダリングを待つための微調整
+                        // 1文字ずつの厳密な配置設定を加えて撮影
                         const canvas = await html2canvas(studio, {
                             useCORS: true, 
                             backgroundColor: '#fff5f5', 
-                            scale: 2, // 画質を倍にしてクッキリさせる
+                            scale: 2, 
                             logging: false,
+                            letterRendering: true, // 文字ズレを強力に防ぐオプション
                             onclone: (clonedDoc) => {
-                                // 撮影用のクローン空間でもフォントが正しく読み込まれるように強制設定
                                 const targetStudio = clonedDoc.getElementById('hidden-capture-studio');
                                 if (targetStudio) {
                                     targetStudio.style.position = 'static';
