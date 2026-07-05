@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026/07/05 13:30",
+  "updatedAt": "2026/07/05 18:29",
   "streams": [
     {
       "id": "stream_1",
@@ -815,7 +815,12 @@
       ],
       "hashtag": "俺らからの君に捧ぐ",
       "adminNote": "",
-      "relatedLinks": []
+      "relatedLinks": [
+        {
+          "label": "探索者歌合戦",
+          "url": "https://youtu.be/Km1ph9yGe54"
+        }
+      ]
     },
     {
       "id": "stream_19",
@@ -1009,7 +1014,12 @@
       ],
       "hashtag": "RP強者の松迎物語",
       "adminNote": "",
-      "relatedLinks": []
+      "relatedLinks": [
+        {
+          "label": "探索者歌合戦",
+          "url": "https://youtu.be/Km1ph9yGe54"
+        }
+      ]
     },
     {
       "id": "stream_24",
@@ -1905,7 +1915,12 @@
       ],
       "hashtag": "エイブモズ4",
       "adminNote": "",
-      "relatedLinks": []
+      "relatedLinks": [
+        {
+          "label": "動画",
+          "url": "https://www.youtube.com/playlist?list=PLJvCA7dxm0SCwg2DJpStRFoCmanVkXZ4w"
+        }
+      ]
     },
     {
       "id": "stream_48",
@@ -1955,7 +1970,16 @@
       ],
       "hashtag": "声が良い誰ロク",
       "adminNote": "",
-      "relatedLinks": []
+      "relatedLinks": [
+        {
+          "label": "ミューフェス",
+          "url": "https://youtu.be/nDEw_Od7F6k"
+        },
+        {
+          "label": "探索者歌合戦",
+          "url": "https://youtu.be/Km1ph9yGe54"
+        }
+      ]
     },
     {
       "id": "stream_49",
@@ -2401,7 +2425,12 @@
       ],
       "hashtag": "デバログ03",
       "adminNote": "",
-      "relatedLinks": []
+      "relatedLinks": [
+        {
+          "label": "👻",
+          "url": "https://privatter.net/i/6225967"
+        }
+      ]
     },
     {
       "id": "stream_60",
@@ -2587,7 +2616,12 @@
       ],
       "hashtag": "大悪党コーサカ",
       "adminNote": "",
-      "relatedLinks": []
+      "relatedLinks": [
+        {
+          "label": "大悪党共犯者",
+          "url": "https://www.youtube.com/live/vZ8KIOde5tc?feature=share"
+        }
+      ]
     },
     {
       "id": "stream_65",
@@ -2905,7 +2939,7 @@
       "gm": "ディズム, コーサカ",
       "characters": [
         {
-          "pcName": "呂布カルマ()",
+          "pcName": "呂布カルマ",
           "plName": "",
           "history": "",
           "profile": "",
@@ -3145,7 +3179,12 @@
       ],
       "hashtag": "ちゃぜ高オカ部03",
       "adminNote": "",
-      "relatedLinks": []
+      "relatedLinks": [
+        {
+          "label": "切り抜き",
+          "url": "https://youtu.be/GIAYgEM2MQ0?si=mHOlrgAkgrqxxJhE"
+        }
+      ]
     },
     {
       "id": "stream_82",
@@ -3601,7 +3640,12 @@
       ],
       "hashtag": "コーホム都市伝説課",
       "adminNote": "",
-      "relatedLinks": []
+      "relatedLinks": [
+        {
+          "label": "ふせったー",
+          "url": "https://x.com/mzm_kosaka/status/1528767999406067713?s=20"
+        }
+      ]
     },
     {
       "id": "stream_94",
@@ -6722,7 +6766,12 @@
       ],
       "hashtag": "馬天道場ヒロイック",
       "adminNote": "",
-      "relatedLinks": []
+      "relatedLinks": [
+        {
+          "label": "アンジョー絵",
+          "url": "https://x.com/mzm_anjo/status/1720016541918663014"
+        }
+      ]
     },
     {
       "id": "stream_173",
@@ -10654,7 +10703,16 @@
       ],
       "hashtag": "コーサカシンフォニア",
       "adminNote": "",
-      "relatedLinks": []
+      "relatedLinks": [
+        {
+          "label": "SS",
+          "url": "https://x.com/mzm_kosaka/status/1845782605112979590?s=20"
+        },
+        {
+          "label": "キャラシ",
+          "url": "https://x.com/mzm_kosaka/status/1845822612053926270?s=20"
+        }
+      ]
     },
     {
       "id": "stream_272",
@@ -11576,7 +11634,12 @@
       ],
       "hashtag": "",
       "adminNote": "",
-      "relatedLinks": []
+      "relatedLinks": [
+        {
+          "label": "MZM動画",
+          "url": "https://youtu.be/f_V5IRksSno?si=9Iel7n9YTnRA_t-z"
+        }
+      ]
     },
     {
       "id": "stream_297",
@@ -11960,7 +12023,7 @@
         {
           "pcName": "八坂薫子",
           "plName": "結崎有理",
-          "history": "",
+          "history": "①火点し頃の蜘蛛踊り:https://www.youtube.com/live/NiOtgkGuNe0?si=yZR4AShX-c5j6Me0\n②この命が燃え尽き果てるまで:https://www.youtube.com/live/ODbldcKfjNc?si=8rdNwDCECBVst8Kp",
           "profile": "",
           "charasheetUrl": "",
           "note": ""
@@ -12122,7 +12185,7 @@
         {
           "pcName": "哭生豹真",
           "plName": "藍月すりっぷ",
-          "history": "",
+          "history": "①スターヒーローズ-BlackBlood-\n②スプリガンの花嫁:https://www.youtube.com/live/OLX_sTLmE4U?si=uIboMikN_JFyF11m",
           "profile": "",
           "charasheetUrl": "",
           "note": ""
@@ -12376,7 +12439,12 @@
       ],
       "hashtag": "ディヤマンの踊り子たち_第一幕",
       "adminNote": "",
-      "relatedLinks": []
+      "relatedLinks": [
+        {
+          "label": "MZM動画",
+          "url": "https://youtu.be/qGV3acP6FYE?si=5x9NWpEZD9K3trWD"
+        }
+      ]
     },
     {
       "id": "stream_319",
