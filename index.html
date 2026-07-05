@@ -333,11 +333,45 @@
                                         </template>
 
                                         <template x-if="char.note">
-                                            <div>
-                                                <div class="font-bold text-slate-400 text-[10px] uppercase tracking-wider mb-0.5">メモ</div>
-                                                <div class="text-slate-700 bg-slate-50/50 p-2 rounded-lg border border-slate-100/60 whitespace-pre-wrap" x-text="char.note"></div>
-                                            </div>
-                                        </template>
+    <div>
+        <div class="font-bold text-slate-400 text-[10px] uppercase tracking-wider mb-0.5">メモ</div>
+        <div class="text-slate-700 bg-slate-50/50 p-3 rounded-xl border border-slate-100/60 whitespace-pre-wrap text-xs sm:text-sm">
+            <span x-text="char.note.replace(/#\S+/g, '').trim()"></span>
+            
+            <template x-if="char.note.includes('#')">
+                <div class="mt-3 pt-2.5 border-t border-slate-100 flex flex-wrap gap-1.5 items-center">
+                    <span class="text-[10px] font-bold text-slate-400 mr-1 select-none">TAG:</span>
+                    <template x-for="tag in extractTags(char.note)">
+                        <button @click="searchByTag(tag)" class="bg-pink-50 hover:bg-pink-100 text-pink-700 font-bold px-2 py-0.5 rounded-md border border-pink-200/40 transition-colors text-[10px] sm:text-xs cursor-pointer">
+                            <span x-text="'#' + tag"></span>
+                        </button>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>
+                                        // 🛠️【新設】メモ欄の文章からハッシュタグだけをきれいに抜き出すロジック
+extractTags(text) {
+    if (!text) return [];
+    // 文章中から #で始まる単語をすべて探す（例: [#神代家, #裏設定]）
+    const matches = text.match(/#(\S+)/g);
+    if (!matches) return [];
+    // 先頭の「#」を取り除いた純粋な文字の配列にして返す（例: ['神代家', '裏設定']）
+    return matches.map(t => t.substring(1));
+},
+
+// 🛠️【新設】タグがクリックされた時に、アプリの検索窓と連動させてモーダルを閉じる処理
+searchByTag(tagName) {
+    // 1. アプリ全体の検索クエリ（検索窓）に、クリックされたタグ名をガツンと代入
+    this.searchQuery = tagName;
+    
+    // 2. 検索結果が見やすいように、今開いているモーダルを自動でシュッと閉じる
+    this.closeModal();
+    
+    // 3. スマホなどで画面が下にスクロールしていた場合、一番上までピュッと戻す親切設計
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
                                         <template x-if="char.charasheetUrl">
                                             <div class="pt-1">
