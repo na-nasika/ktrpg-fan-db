@@ -312,17 +312,23 @@
     <div>
         <div class="font-bold text-slate-400 text-[10px] uppercase tracking-wider mb-1">通過済みシナリオ</div>
         <div class="grid grid-cols-1 gap-1.5">
+            <template x-if="char.history">
+    <div>
+        <div class="font-bold text-slate-400 text-[10px] uppercase tracking-wider mb-1">通過済みシナリオ</div>
+        <div class="grid grid-cols-1 gap-1.5">
             <template x-for="line in parseHistoryLinks(char.history)">
-                <template x-if="line.url">
-                    <a :href="line.url" target="_blank" class="flex items-center justify-between w-full bg-pink-50/30 hover:bg-pink-100/40 text-pink-700 font-bold px-3 py-2 rounded-xl border border-pink-200/40 transition-colors text-left text-xs">
-                        <span x-text="line.title"></span>
-                        <span class="text-[10px] font-normal text-pink-400">↗</span>
-                    </a>
-                </template>
-                
-                <template x-if="!line.url">
-                    <div class="text-slate-600 bg-slate-50/80 px-3 py-2 rounded-xl border border-slate-100/70 font-medium text-xs" x-text="line.title"></div>
-                </template>
+                <div>
+                    <template x-if="line.url">
+                        <a :href="line.url" target="_blank" class="flex items-center justify-between w-full bg-pink-50/30 hover:bg-pink-100/40 text-pink-700 font-bold px-3 py-2 rounded-xl border border-pink-200/40 transition-colors text-left text-xs">
+                            <span x-text="line.title"></span>
+                            <span class="text-[10px] font-normal text-pink-400">↗</span>
+                        </a>
+                    </template>
+                    
+                    <template x-if="!line.url">
+                        <div class="text-slate-600 bg-slate-50/80 px-3 py-2 rounded-xl border border-slate-100/70 font-medium text-xs" x-text="line.title"></div>
+                    </template>
+                </div>
             </template>
         </div>
     </div>
