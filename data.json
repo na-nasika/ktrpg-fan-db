@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026/07/05 13:16",
+  "updatedAt": "2026/07/05 13:30",
   "streams": [
     {
       "id": "stream_1",
@@ -44,7 +44,7 @@
         }
       ],
       "hashtag": "ダブルクロスXX",
-      "adminNote": "メモ　テスト",
+      "adminNote": "",
       "relatedLinks": []
     },
     {
@@ -467,7 +467,7 @@
         {
           "pcName": "捨石未聞",
           "plName": "高生紳士",
-          "history": "①暗闇の中、傍に立つ:https://www.youtube.com/live/1f3qhZNS0_c?feature=share\n②ロールシャッハシンドローム（DPC）:",
+          "history": "①暗闇の中、傍に立つ:https://www.youtube.com/live/1f3qhZNS0_c?feature=share\n②ロールシャッハシンドローム（DPC）:https://www.youtube.com/live/Baa0YPVwqGA?feature=share",
           "profile": "",
           "charasheetUrl": "",
           "note": ""
@@ -11882,9 +11882,9 @@
       "gm": "想有ぱか",
       "characters": [
         {
-          "pcName": "星野千夏",
+          "pcName": "星野千夏.",
           "plName": "コーサカ",
-          "history": "①1072 （NPC）:https://www.youtube.com/live/7_fZ-S18L0c?si=DfrNL6m9nCYn-ZBF\n②ロールシャッハシンドローム:https://www.youtube.com/live/uso2nPRtOlM?feature=share",
+          "history": "",
           "profile": "",
           "charasheetUrl": "",
           "note": ""
