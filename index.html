@@ -396,33 +396,36 @@
                     return dateTimeStr.split(" ")[0];
                 },
 
-                // 🛠️ アップデート：🔗の廃止と、URL判定処理の強化
+                // 🛠️【完全修正】どんな文字列が来ても絶対にテキストを救出する頑強パース
                 parseHistoryLinks(text) {
                     if (!text) return [];
-                    return text.split('\n').map(line => {
-                        const cleanLine = line.trim();
-                        if (!cleanLine) return null;
+                    const items = [];
+                    const lines = text.split('\n');
+
+                    for (let i = 0; i < lines.length; i++) {
+                        const cleanLine = lines[i].trim();
+                        if (!cleanLine) continue; // 完全な空行だけはスキップ
 
                         let title = cleanLine;
                         let url = null;
 
-                        // 文字列の中に「http」が含まれているか探す
+                        // 1. まず行の中に 'http' があるかどうかを最優先で探す
                         const httpIndex = cleanLine.indexOf('http');
                         if (httpIndex !== -1) {
-                            // httpより前の部分をシナリオタイトルにする（末尾のコロン等も除去）
-                            title = cleanLine.substring(0, httpIndex).replace(/[:：\s]+$/, '').trim();
-                            // http以降をURLにする
+                            // httpより前をタイトル、以降をURLにする
+                            title = cleanLine.substring(0, httpIndex).trim();
                             url = cleanLine.substring(httpIndex).trim();
-                        } else {
-                            // httpがない場合は、末尾に「:」だけ残っている可能性があるので綺麗にお掃除
-                            title = cleanLine.replace(/[:：\s]+$/, '').trim();
                         }
 
-                        // もしお掃除した結果、URLが空文字ならnullにする
-                        if (url === "") url = null;
+                        // 2. タイトルの末尾に残ったコロン（: や ：）を綺麗にお掃除
+                        title = title.replace(/[:：\s]+$/, '').trim();
 
-                        return { title: title || '配信リンク', url: url };
-                    }).filter(Boolean);
+                        // 3. 万が一お掃除した結果、タイトルが空っぽになったら「配信リンク」で補填
+                        if (!title) title = 'シナリオ';
+
+                        items.push({ title: title, url: url });
+                    }
+                    return items;
                 },
 
                 getYoutubeId(links) {
