@@ -273,11 +273,13 @@
                 
                 <div class="p-6 space-y-4 text-xs sm:text-sm flex-1 overflow-y-auto bg-white">
                     <template x-if="activeStream.adminNote">
-                        <div class="text-slate-700 bg-pink-50/30 p-3 rounded-xl border border-pink-100/80 leading-relaxed font-normal flex gap-1.5 items-start">
-                            <span class="shrink-0 select-none">💡</span>
-                            <div class="whitespace-pre-wrap" x-text="activeStream.adminNote"></div>
-                        </div>
-                    </template>
+    <div class="text-slate-700 bg-pink-50/30 p-3 rounded-xl border border-pink-100/80 leading-relaxed font-normal flex gap-1.5 items-start">
+        <span class="shrink-0 select-none">💡</span>
+        <div class="whitespace-pre-wrap text-xs sm:text-sm" 
+             x-html="renderAdminNote(activeStream.adminNote)"
+             @click="handleInlineClick($event)"></div>
+    </div>
+</template>
 
                     <template x-if="activeStream.relatedLinks && activeStream.relatedLinks.length > 0">
                         <div class="flex flex-col gap-1.5 pt-1">
@@ -428,6 +430,54 @@
                     }
                     return items;
                 },
+
+                // 🛠️【新設】文章内の[リンク]や@IDを解析して、控えめな文字リンクに変換する職人ロジック
+renderAdminNote(text) {
+    if (!text) return '';
+    
+    // 1. エスケープ処理（セキュリティ対策：悪意あるHTMLコードを無効化）
+    let safeText = text
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+
+    // 2. [表示文字](URL) のMarkdown形式を「控えめな文字リンク」に変換
+    // 例: [公式FA](https://...) -> <a href="..." target="_blank" class="text-pink-500 font-bold hover:underline">公式FA ↗</a>
+    safeText = safeText.replace(/\[(.*?)\]\((https?:\/\/.*?)\)/g, (match, label, url) => {
+        return `<a href="${url}" target="_blank" class="text-pink-500 font-bold hover:underline inline-flex items-center gap-0.5">${label}<span class="text-[10px] font-normal text-pink-400">↗</span></a>`;
+    });
+
+    // 3. @ID（例: @104）を「セッションジャンプ用の特別なリンク」に変換
+    // 例: @104 -> <span data-jump-id="stream_104" class="text-pink-600 font-black underline cursor-pointer hover:text-pink-700">@104（セッション名）</span>
+    safeText = safeText.replace(/@(\d+)/g, (match, id) => {
+        const targetId = 'stream_' + id;
+        // アプリ内の全データから、該当するIDのセッションを探してタイトルを取得
+        const found = this.streams.find(s => s.id === targetId);
+        const titleText = found ? `（${found.scenario}）` : '';
+        
+        return `<span data-jump-id="${targetId}" class="text-pink-500 font-bold underline cursor-pointer hover:text-pink-700 select-none">@${id}${titleText}</span>`;
+    });
+
+    return safeText;
+},
+
+// 🛠️【新設】文章の中の@IDリンクがクリックされたかを判定する処理
+handleInlineClick(event) {
+    // クリックされた文字が「data-jump-id」という属性を持っているかチェック
+    const jumpId = event.target.getAttribute('data-jump-id');
+    if (jumpId) {
+        // 該当するセッションのデータを検索
+        const foundStream = this.streams.find(s => s.id === jumpId);
+        if (foundStream) {
+            // 今のモーダルの中身を、見つけたセッションの内容にシュッと切り替える！
+            this.activeStream = foundStream;
+        } else {
+            alert('該当するセッションデータが見つかりませんでした。IDを確認してください。');
+        }
+    }
+},
 
                 getYoutubeId(links) {
                     if (!links || links.length === 0) return null;
