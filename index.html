@@ -416,11 +416,9 @@
                             // http以降をURLにする
                             url = cleanLine.substring(httpIndex).trim();
                         } else {
-                            // httpがない場合は、末尾に「:」だけ残っている可能性があるので綺麗にお掃除
                             title = cleanLine.replace(/[:：\s]+$/, '').trim();
                         }
 
-                        // もしお掃除した結果、URLが空文字ならnullにする
                         if (url === "") url = null;
 
                         return { title: title || '配信リンク', url: url };
