@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026/07/15 11:23",
+  "updatedAt": "2026/07/15 17:56",
   "streams": [
     {
       "id": "stream_1",
       "date": "2020/06/20",
       "scenario": "Awaken from a nightare!",
-      "system": "DX3",
+      "system": "ダブルクロス3rd",
       "gm": "茶越きよか",
       "characters": [
         {
@@ -207,7 +207,7 @@
       "id": "stream_6",
       "date": "2020/12/08",
       "scenario": "Freedom exist",
-      "system": "DX3",
+      "system": "ダブルクロス3rd",
       "gm": "茶越きよか, 巧兄",
       "characters": [
         {
@@ -10619,7 +10619,7 @@
       "id": "stream_269",
       "date": "2025/08/14",
       "scenario": "キブンゼ",
-      "system": "",
+      "system": "エモクロア",
       "gm": "necoze",
       "characters": [
         {
